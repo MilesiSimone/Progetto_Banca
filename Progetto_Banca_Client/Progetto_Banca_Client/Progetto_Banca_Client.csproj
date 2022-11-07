@@ -83,5 +83,14 @@
   <ItemGroup>
     <None Include="Resources\LogoBcc.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-technical-support-customer-service-computer-icons-5afbbcb09d2f94.8296988415264472806438.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\495-4950508_show-password-show-password-icon-png-transparent-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Q4797j0E_400x400.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

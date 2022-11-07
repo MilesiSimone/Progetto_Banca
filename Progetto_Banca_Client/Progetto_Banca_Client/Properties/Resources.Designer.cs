@@ -63,9 +63,40 @@ namespace Progetto_Banca_Client.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _495_4950508_show_password_show_password_icon_png_transparent_png {
+            get {
+                object obj = ResourceManager.GetObject("_495_4950508_show_password_show_password_icon_png_transparent_png", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kisspng_technical_support_customer_service_computer_icons_5afbbcb09d2f94_8296988415264472806438 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng_technical_support_customer_service_computer_icons_5afbbcb09d2f94_82969884" +
+                        "15264472806438", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LogoBcc {
             get {
                 object obj = ResourceManager.GetObject("LogoBcc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Q4797j0E_400x400 {
+            get {
+                object obj = ResourceManager.GetObject("Q4797j0E_400x400", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
