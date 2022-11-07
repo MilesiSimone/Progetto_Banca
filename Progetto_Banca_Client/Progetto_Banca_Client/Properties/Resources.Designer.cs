@@ -73,6 +73,16 @@ namespace Progetto_Banca_Client.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_accedi_arrotondato_destro_52 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_accedi_arrotondato_destro_52", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap kisspng_technical_support_customer_service_computer_icons_5afbbcb09d2f94_8296988415264472806438 {
             get {
                 object obj = ResourceManager.GetObject("kisspng_technical_support_customer_service_computer_icons_5afbbcb09d2f94_82969884" +
