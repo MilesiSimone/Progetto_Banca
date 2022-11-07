@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.button_accedi = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox_username = new System.Windows.Forms.TextBox();
             this.textBox_password = new System.Windows.Forms.TextBox();
@@ -37,33 +36,20 @@
             this.label_password = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label_date = new System.Windows.Forms.Label();
+            this.label_login = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button_accedi = new Progetto_Banca_Client.button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox_mostra_password = new System.Windows.Forms.PictureBox();
             this.pictureBox_bcc = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_mostra_password)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_bcc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button_accedi
-            // 
-            this.button_accedi.AutoEllipsis = true;
-            this.button_accedi.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button_accedi.BackColor = System.Drawing.Color.Green;
-            this.button_accedi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_accedi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_accedi.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_accedi.Location = new System.Drawing.Point(96, 386);
-            this.button_accedi.Name = "button_accedi";
-            this.button_accedi.Size = new System.Drawing.Size(224, 42);
-            this.button_accedi.TabIndex = 0;
-            this.button_accedi.Text = "ACCEDI";
-            this.button_accedi.UseVisualStyleBackColor = false;
-            this.button_accedi.MouseLeave += new System.EventHandler(this.button_accedi_MouseLeave);
-            this.button_accedi.MouseHover += new System.EventHandler(this.button_accedi_MouseHover);
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(92, 111);
             this.label1.Name = "label1";
@@ -74,6 +60,7 @@
             // 
             // textBox_username
             // 
+            this.textBox_username.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_username.Location = new System.Drawing.Point(96, 236);
             this.textBox_username.Name = "textBox_username";
@@ -82,6 +69,7 @@
             // 
             // textBox_password
             // 
+            this.textBox_password.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_password.Location = new System.Drawing.Point(96, 300);
             this.textBox_password.Name = "textBox_password";
@@ -91,6 +79,7 @@
             // 
             // label_user
             // 
+            this.label_user.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_user.AutoSize = true;
             this.label_user.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_user.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -102,6 +91,7 @@
             // 
             // label_password
             // 
+            this.label_password.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_password.AutoSize = true;
             this.label_password.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -113,6 +103,7 @@
             // 
             // checkBox1
             // 
+            this.checkBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -125,6 +116,7 @@
             // 
             // label_date
             // 
+            this.label_date.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_date.AutoSize = true;
             this.label_date.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_date.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -134,8 +126,66 @@
             this.label_date.TabIndex = 8;
             this.label_date.Text = "label_date";
             // 
+            // label_login
+            // 
+            this.label_login.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_login.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_login.Location = new System.Drawing.Point(92, 185);
+            this.label_login.Name = "label_login";
+            this.label_login.Size = new System.Drawing.Size(232, 23);
+            this.label_login.TabIndex = 11;
+            this.label_login.Text = "Login";
+            this.label_login.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 9.75F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(212, 460);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(108, 16);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Richiedi assistenza";
+            this.label2.MouseLeave += new System.EventHandler(this.label2_MouseLeave);
+            this.label2.MouseHover += new System.EventHandler(this.label2_MouseHover);
+            // 
+            // button_accedi
+            // 
+            this.button_accedi.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_accedi.BackColor = System.Drawing.Color.Green;
+            this.button_accedi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_accedi.FlatAppearance.BorderSize = 0;
+            this.button_accedi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_accedi.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_accedi.ForeColor = System.Drawing.Color.Black;
+            this.button_accedi.Location = new System.Drawing.Point(96, 378);
+            this.button_accedi.Name = "button_accedi";
+            this.button_accedi.Size = new System.Drawing.Size(224, 42);
+            this.button_accedi.TabIndex = 13;
+            this.button_accedi.Text = "ACCEDI";
+            this.button_accedi.UseVisualStyleBackColor = false;
+            this.button_accedi.MouseLeave += new System.EventHandler(this.button_accedi_MouseLeave);
+            this.button_accedi.MouseHover += new System.EventHandler(this.button_accedi_MouseHover);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBox1.Image = global::Progetto_Banca_Client.Properties.Resources.Q4797j0E_400x400;
+            this.pictureBox1.Location = new System.Drawing.Point(374, 524);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(41, 39);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
             // pictureBox_mostra_password
             // 
+            this.pictureBox_mostra_password.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox_mostra_password.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox_mostra_password.Image = global::Progetto_Banca_Client.Properties.Resources._495_4950508_show_password_show_password_icon_png_transparent_png;
             this.pictureBox_mostra_password.Location = new System.Drawing.Point(326, 300);
@@ -148,6 +198,7 @@
             // 
             // pictureBox_bcc
             // 
+            this.pictureBox_bcc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox_bcc.Image = global::Progetto_Banca_Client.Properties.Resources.LogoBcc;
             this.pictureBox_bcc.Location = new System.Drawing.Point(130, 21);
             this.pictureBox_bcc.Name = "pictureBox_bcc";
@@ -157,23 +208,15 @@
             this.pictureBox_bcc.TabStop = false;
             this.pictureBox_bcc.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::Progetto_Banca_Client.Properties.Resources.Q4797j0E_400x400;
-            this.pictureBox1.Location = new System.Drawing.Point(374, 524);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(41, 39);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(416, 559);
+            this.Controls.Add(this.button_accedi);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label_login);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox_mostra_password);
             this.Controls.Add(this.label_date);
@@ -184,16 +227,15 @@
             this.Controls.Add(this.textBox_username);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox_bcc);
-            this.Controls.Add(this.button_accedi);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(432, 598);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login Client";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_mostra_password)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_bcc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,7 +244,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox_bcc;
-        private System.Windows.Forms.Button button_accedi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox_username;
         private System.Windows.Forms.TextBox textBox_password;
@@ -212,6 +253,9 @@
         private System.Windows.Forms.Label label_date;
         private System.Windows.Forms.PictureBox pictureBox_mostra_password;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label_login;
+        private System.Windows.Forms.Label label2;
+        private button button_accedi;
     }
 }
 

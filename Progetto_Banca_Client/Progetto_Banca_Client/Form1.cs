@@ -50,5 +50,15 @@ namespace Progetto_Banca_Client
         {
             button_accedi.ForeColor = Color.Black;
         }
+
+        private void label2_MouseHover(object sender, EventArgs e)
+        {
+            label2.ForeColor = Color.Blue;
+        }
+
+        private void label2_MouseLeave(object sender, EventArgs e)
+        {
+            label2.ForeColor = Color.FromArgb(64, 64, 64);
+        }
     }
 }
