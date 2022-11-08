@@ -110,5 +110,23 @@
   <ItemGroup>
     <None Include="Resources\icons8-accedi-arrotondato-destro-52.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-assistenza-clienti-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cassaforte-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-nascondere-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-visibile-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\420x300_Visa_Infinite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\privati_debit_bianca.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

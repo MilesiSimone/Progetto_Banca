@@ -121,14 +121,32 @@
   <data name="icons8_accedi_arrotondato_destro_52" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-accedi-arrotondato-destro-52.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_assistenza_clienti_96" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-assistenza-clienti-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_cassaforte_96" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-cassaforte-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="kisspng_technical_support_customer_service_computer_icons_5afbbcb09d2f94_8296988415264472806438" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-technical-support-customer-service-computer-icons-5afbbcb09d2f94.8296988415264472806438.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LogoBcc" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LogoBcc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Mastercard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\privati_debit_bianca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nascondi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-nascondere-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Q4797j0E_400x400" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Q4797j0E_400x400.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Visa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\420x300_Visa_Infinite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="visible" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-visibile-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_495_4950508_show_password_show_password_icon_png_transparent_png" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\495-4950508_show-password-show-password-icon-png-transparent-png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

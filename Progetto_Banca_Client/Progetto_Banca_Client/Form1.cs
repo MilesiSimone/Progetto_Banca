@@ -17,6 +17,7 @@ namespace Progetto_Banca_Client
             InitializeComponent();
             DateTime thisDay = DateTime.Today;
             label_date.Text = thisDay.ToString("D");
+            CheckForIllegalCrossThreadCalls = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -53,12 +54,41 @@ namespace Progetto_Banca_Client
 
         private void label2_MouseHover(object sender, EventArgs e)
         {
-            label2.ForeColor = Color.Blue;
+
         }
 
         private void label2_MouseLeave(object sender, EventArgs e)
         {
-            label2.ForeColor = Color.FromArgb(64, 64, 64);
+        }
+
+        private void button_accedi_Click(object sender, EventArgs e)
+        {
+            if(textBox_username.Text == "1" && textBox_password.Text == "2")
+            {
+                Form2 f2 = new Form2();
+                f2.Show();
+                this.Hide();
+            }
+            else
+            {
+                label_error.Visible = true;
+            }
+        }
+
+        private void button_accedi_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                button_accedi_Click(sender, e);
+        }
+
+        private void linkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.cartabcc.it/vantaggi-e-servizi/controllo/Pagine/assistenza-24-7.aspx");
         }
     }
 }
