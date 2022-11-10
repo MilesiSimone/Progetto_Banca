@@ -117,50 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="icons8_24_40" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-24-40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_accedi_arrotondato_destro_52" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-accedi-arrotondato-destro-52.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_assistenza_clienti_96" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-assistenza-clienti-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_carte_bancarie_40" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-carte-bancarie-40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_cassaforte_96" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-cassaforte-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_frecce_direzionali_40" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-frecce-direzionali-40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="kisspng_technical_support_customer_service_computer_icons_5afbbcb09d2f94_8296988415264472806438" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kisspng-technical-support-customer-service-computer-icons-5afbbcb09d2f94.8296988415264472806438.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LogoBcc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LogoBcc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Mastercard" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\privati_debit_bianca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="nascondi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-nascondere-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Q4797j0E_400x400" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Q4797j0E_400x400.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="soldi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-soldi-40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Visa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\420x300_Visa_Infinite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="visible" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-visibile-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_495_4950508_show_password_show_password_icon_png_transparent_png" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\495-4950508_show-password-show-password-icon-png-transparent-png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="button4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAArxJREFUWEft
+        l0uoTVEchw8JERMyYiAMjTzKoySUx0BCeWTgPWGAgYEBE6/yCCPJhAFhIqQYkLeMlAHKhIRIeYRM+L5z
+        96ptn3323ud5z9X51dfZa93uOr/9f6y1Tqmrrrr6jzQTdnYIeqnQHrgHB3oZPeilQk6m/WFii0mqmo++
+        a3BV9NkKpa1ds8GV0WeWBsA82B7hs3N5Sls712AIvW9XxJwd9xIewGE4Ag+juRmQp/A94XsLGywizb2D
+        +eXRv1oA72F6eZSvphs0hUYpzVzQQngORdJdl8FBcAm+w8VoHGSdmdY8PYI5PY9lafpNhFEOqsvgBrgC
+        w+AqrIOgHXCo5zFT1qWNE6Qx0259vnYiUl0G14PGhsM1aJZBzVm/DRs0pab2G1yIxkGm2G7NUzLFplVj
+        Eq/fugxmKTRJvI6SWgQtbZI8mSq3Egs/Kc21dJspulFrwCiZSjfpo/A4mitiruaNOq5+kHZeJmUKrbNt
+        ET4XSWva2jUZVEWiWK/S1q7ZYAh9q0iqbxu8CWm/EdqJHqoabPdvEk8nCeM/0edcqFA8gnbipgg7bTm4
+        60+F8TAC7PBGlUyzBqsqHsETcBLOgEfcZdD8ffD0+Aou9gmewXU4Da6xEdxmxkDWS6yG5DaTa1ATW2At
+        GDXP22kwGvpDXINBE5PBk8SLxV44B27UH+EHPIXzYGZcbyRUU6ZB8270jsEpMHLWx13wBvILXsEtMFre
+        UPyfUVBNXtMmgS/sKWMAPoAXBbNiUDQ9FFSmwTwNhAnggtbmcbgDX8Brvy+zC2bBEMjSGlgMBuQF/AbL
+        qyGD1WSdjYNlYJSewE/wtr0bpkC8PHyRuIzifpgN+5xoh0ytXX8QbCLTasOtAHeAuDQovaqxsBVugI1z
+        GzaDZjvCYFxGdymchc/wFjrKYFx2r3vhkvKoq6arVPoLuMoJXD4yfI4AAAAASUVORK5CYII=
+</value>
   </data>
 </root>

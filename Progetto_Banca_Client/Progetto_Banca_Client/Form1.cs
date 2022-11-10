@@ -63,7 +63,7 @@ namespace Progetto_Banca_Client
 
         private void button_accedi_Click(object sender, EventArgs e)
         {
-            if(textBox_username.Text == "1" && textBox_password.Text == "2")
+            if(textBox_username.Text == "u1" && textBox_password.Text == "u1")
             {
                 Form2 f2 = new Form2();
                 f2.Show();
@@ -72,6 +72,8 @@ namespace Progetto_Banca_Client
             else
             {
                 label_error.Visible = true;
+                textBox_username.Text = "";
+                textBox_password.Text = "";
             }
         }
 

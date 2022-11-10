@@ -73,6 +73,16 @@ namespace Progetto_Banca_Client.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_24_40 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_24_40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_accedi_arrotondato_destro_52 {
             get {
                 object obj = ResourceManager.GetObject("icons8_accedi_arrotondato_destro_52", resourceCulture);
@@ -93,9 +103,29 @@ namespace Progetto_Banca_Client.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_carte_bancarie_40 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_carte_bancarie_40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_cassaforte_96 {
             get {
                 object obj = ResourceManager.GetObject("icons8_cassaforte_96", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_frecce_direzionali_40 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_frecce_direzionali_40", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -147,6 +177,16 @@ namespace Progetto_Banca_Client.Properties {
         internal static System.Drawing.Bitmap Q4797j0E_400x400 {
             get {
                 object obj = ResourceManager.GetObject("Q4797j0E_400x400", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap soldi {
+            get {
+                object obj = ResourceManager.GetObject("soldi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

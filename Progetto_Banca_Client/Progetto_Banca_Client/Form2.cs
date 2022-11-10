@@ -21,7 +21,7 @@ namespace Progetto_Banca_Client
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -98,6 +98,12 @@ namespace Progetto_Banca_Client
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button_operazioni_Click(object sender, EventArgs e)
+        {
+            Form3 f3 = new Form3();
+            f3.Show();
         }
     }
 }
