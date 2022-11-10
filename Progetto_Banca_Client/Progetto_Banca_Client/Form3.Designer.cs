@@ -39,8 +39,24 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel_desktop = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.button5 = new Progetto_Banca_Client.button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel_desktop.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -186,11 +202,161 @@
             // panel_desktop
             // 
             this.panel_desktop.BackColor = System.Drawing.Color.White;
+            this.panel_desktop.Controls.Add(this.button5);
+            this.panel_desktop.Controls.Add(this.textBox4);
+            this.panel_desktop.Controls.Add(this.label8);
+            this.panel_desktop.Controls.Add(this.checkBox3);
+            this.panel_desktop.Controls.Add(this.checkBox2);
+            this.panel_desktop.Controls.Add(this.label7);
+            this.panel_desktop.Controls.Add(this.textBox3);
+            this.panel_desktop.Controls.Add(this.textBox2);
+            this.panel_desktop.Controls.Add(this.label6);
+            this.panel_desktop.Controls.Add(this.label5);
+            this.panel_desktop.Controls.Add(this.label4);
+            this.panel_desktop.Controls.Add(this.textBox1);
+            this.panel_desktop.Controls.Add(this.label3);
+            this.panel_desktop.Controls.Add(this.checkBox1);
+            this.panel_desktop.Controls.Add(this.label2);
             this.panel_desktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_desktop.Location = new System.Drawing.Point(0, 0);
             this.panel_desktop.Name = "panel_desktop";
             this.panel_desktop.Size = new System.Drawing.Size(937, 563);
             this.panel_desktop.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(665, 132);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 14);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Detrazione fiscale";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(668, 149);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(196, 18);
+            this.checkBox1.TabIndex = 1;
+            this.checkBox1.Text = "é un bonifico per detrazione fiscale";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(271, 153);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(111, 14);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Conto del beneficiario";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(274, 170);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(170, 20);
+            this.textBox1.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(282, 251);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(100, 14);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Dati dell\'operazione";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(282, 282);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(42, 14);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Importo";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(282, 333);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(46, 14);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Causale";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(285, 299);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(170, 20);
+            this.textBox2.TabIndex = 7;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(285, 350);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(170, 20);
+            this.textBox3.TabIndex = 8;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(645, 251);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(133, 14);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Seleziona il tipo di bonifico";
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(648, 275);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(110, 18);
+            this.checkBox2.TabIndex = 10;
+            this.checkBox2.Text = "Bonifico ordinario";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(648, 309);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(118, 18);
+            this.checkBox3.TabIndex = 11;
+            this.checkBox3.Text = "Bonifico istantaneo";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(282, 383);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(72, 14);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Numero carta";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(285, 400);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(170, 20);
+            this.textBox4.TabIndex = 13;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Green;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(714, 456);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(165, 51);
+            this.button5.TabIndex = 14;
+            this.button5.Text = "INVIA";
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // Form3
             // 
@@ -211,6 +377,8 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel_desktop.ResumeLayout(false);
+            this.panel_desktop.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -226,5 +394,20 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel_desktop;
+        private button button5;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label2;
     }
 }
