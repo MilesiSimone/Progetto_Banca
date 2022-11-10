@@ -41,6 +41,7 @@
             this.panel_bonifici = new System.Windows.Forms.Panel();
             this.textBox_num_carta = new System.Windows.Forms.TextBox();
             this.label_num_carta = new System.Windows.Forms.Label();
+            this.button_invia_bon = new Progetto_Banca_Client.button();
             this.checkBox_bon_istantaneo = new System.Windows.Forms.CheckBox();
             this.checkBox_bon_ordinario = new System.Windows.Forms.CheckBox();
             this.label_tipo_bon = new System.Windows.Forms.Label();
@@ -53,7 +54,6 @@
             this.label_conto_ben = new System.Windows.Forms.Label();
             this.checkBox_det_fisc = new System.Windows.Forms.CheckBox();
             this.label_det_fisc = new System.Windows.Forms.Label();
-            this.button_invia_bon = new Progetto_Banca_Client.button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel_bonifici.SuspendLayout();
@@ -248,6 +248,22 @@
             this.label_num_carta.Text = "Numero carta";
             this.label_num_carta.Visible = false;
             // 
+            // button_invia_bon
+            // 
+            this.button_invia_bon.BackColor = System.Drawing.Color.Green;
+            this.button_invia_bon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_invia_bon.FlatAppearance.BorderSize = 0;
+            this.button_invia_bon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_invia_bon.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_invia_bon.ForeColor = System.Drawing.Color.White;
+            this.button_invia_bon.Location = new System.Drawing.Point(714, 443);
+            this.button_invia_bon.Name = "button_invia_bon";
+            this.button_invia_bon.Size = new System.Drawing.Size(165, 51);
+            this.button_invia_bon.TabIndex = 14;
+            this.button_invia_bon.Text = "INVIA";
+            this.button_invia_bon.UseVisualStyleBackColor = false;
+            this.button_invia_bon.Visible = false;
+            // 
             // checkBox_bon_istantaneo
             // 
             this.checkBox_bon_istantaneo.AutoSize = true;
@@ -388,22 +404,6 @@
             this.label_det_fisc.TabIndex = 0;
             this.label_det_fisc.Text = "Detrazione fiscale";
             this.label_det_fisc.Visible = false;
-            // 
-            // button_invia_bon
-            // 
-            this.button_invia_bon.BackColor = System.Drawing.Color.Green;
-            this.button_invia_bon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_invia_bon.FlatAppearance.BorderSize = 0;
-            this.button_invia_bon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_invia_bon.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_invia_bon.ForeColor = System.Drawing.Color.White;
-            this.button_invia_bon.Location = new System.Drawing.Point(696, 435);
-            this.button_invia_bon.Name = "button_invia_bon";
-            this.button_invia_bon.Size = new System.Drawing.Size(165, 51);
-            this.button_invia_bon.TabIndex = 14;
-            this.button_invia_bon.Text = "INVIA";
-            this.button_invia_bon.UseVisualStyleBackColor = false;
-            this.button_invia_bon.Visible = false;
             // 
             // Form3
             // 
