@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.textBox_username = new System.Windows.Forms.TextBox();
@@ -41,8 +42,9 @@
             this.pictureBox_mostra_password = new System.Windows.Forms.PictureBox();
             this.pictureBox_bcc = new System.Windows.Forms.PictureBox();
             this.label_error = new System.Windows.Forms.Label();
-            this.button_accedi = new Progetto_Banca_Client.button();
             this.linkLabel = new System.Windows.Forms.LinkLabel();
+            this.button_accedi = new Progetto_Banca_Client.button();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_mostra_password)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_bcc)).BeginInit();
@@ -162,6 +164,7 @@
             this.pictureBox_mostra_password.TabIndex = 9;
             this.pictureBox_mostra_password.TabStop = false;
             this.pictureBox_mostra_password.Click += new System.EventHandler(this.pictureBox_mostra_password_Click);
+            this.pictureBox_mostra_password.MouseHover += new System.EventHandler(this.pictureBox_mostra_password_MouseHover);
             // 
             // pictureBox_bcc
             // 
@@ -187,6 +190,20 @@
             this.label_error.Text = "Username o Password errati.";
             this.label_error.Visible = false;
             // 
+            // linkLabel
+            // 
+            this.linkLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.linkLabel.AutoSize = true;
+            this.linkLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.linkLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel.Location = new System.Drawing.Point(204, 447);
+            this.linkLabel.Name = "linkLabel";
+            this.linkLabel.Size = new System.Drawing.Size(121, 16);
+            this.linkLabel.TabIndex = 15;
+            this.linkLabel.TabStop = true;
+            this.linkLabel.Text = "Richiedi assistenza";
+            this.linkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_LinkClicked);
+            // 
             // button_accedi
             // 
             this.button_accedi.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -206,20 +223,6 @@
             this.button_accedi.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button_accedi_KeyDown);
             this.button_accedi.MouseLeave += new System.EventHandler(this.button_accedi_MouseLeave);
             this.button_accedi.MouseHover += new System.EventHandler(this.button_accedi_MouseHover);
-            // 
-            // linkLabel
-            // 
-            this.linkLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.linkLabel.AutoSize = true;
-            this.linkLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.linkLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel.Location = new System.Drawing.Point(204, 447);
-            this.linkLabel.Name = "linkLabel";
-            this.linkLabel.Size = new System.Drawing.Size(121, 16);
-            this.linkLabel.TabIndex = 15;
-            this.linkLabel.TabStop = true;
-            this.linkLabel.Text = "Richiedi assistenza";
-            this.linkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_LinkClicked);
             // 
             // Form1
             // 
@@ -274,6 +277,7 @@
         private System.Windows.Forms.Label label_error;
         private System.Windows.Forms.LinkLabel linkLabel;
         public System.Windows.Forms.TextBox textBox_username;
+        private System.Windows.Forms.ToolTip toolTip;
     }
 }
 

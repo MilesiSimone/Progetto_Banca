@@ -92,5 +92,10 @@ namespace Progetto_Banca_Client
         {
             System.Diagnostics.Process.Start("https://www.cartabcc.it/vantaggi-e-servizi/controllo/Pagine/assistenza-24-7.aspx");
         }
+
+        private void pictureBox_mostra_password_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.SetToolTip(pictureBox_mostra_password, "Mostra/Nascondi password");
+        }
     }
 }
