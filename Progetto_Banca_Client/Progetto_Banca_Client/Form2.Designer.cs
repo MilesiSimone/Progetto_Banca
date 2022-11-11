@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,6 +51,9 @@
             this.button_autorizzazioni = new Progetto_Banca_Client.button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel2 = new Progetto_Banca_Client.panel.panel();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cassaforte)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -68,7 +72,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label6.Location = new System.Drawing.Point(193, 247);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 16);
+            this.label6.Size = new System.Drawing.Size(104, 16);
             this.label6.TabIndex = 14;
             this.label6.Text = "Visualizza conto";
             this.label6.MouseLeave += new System.EventHandler(this.label6_MouseLeave);
@@ -101,7 +105,7 @@
             this.label_saldodisp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label_saldodisp.Location = new System.Drawing.Point(4, 193);
             this.label_saldodisp.Name = "label_saldodisp";
-            this.label_saldodisp.Size = new System.Drawing.Size(106, 16);
+            this.label_saldodisp.Size = new System.Drawing.Size(107, 16);
             this.label_saldodisp.TabIndex = 5;
             this.label_saldodisp.Text = "Saldo disponibile";
             // 
@@ -112,7 +116,7 @@
             this.label_saldocont.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label_saldocont.Location = new System.Drawing.Point(3, 116);
             this.label_saldocont.Name = "label_saldocont";
-            this.label_saldocont.Size = new System.Drawing.Size(97, 16);
+            this.label_saldocont.Size = new System.Drawing.Size(98, 16);
             this.label_saldocont.TabIndex = 4;
             this.label_saldocont.Text = "Saldo contabile";
             // 
@@ -155,7 +159,7 @@
             this.label_saldoNasc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label_saldoNasc.Location = new System.Drawing.Point(6, 100);
             this.label_saldoNasc.Name = "label_saldoNasc";
-            this.label_saldoNasc.Size = new System.Drawing.Size(99, 16);
+            this.label_saldoNasc.Size = new System.Drawing.Size(100, 16);
             this.label_saldoNasc.TabIndex = 13;
             this.label_saldoNasc.Text = "Saldo Nascosto";
             this.label_saldoNasc.Visible = false;
@@ -217,6 +221,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
             // 
             // pictureBox_mostra_password
             // 
@@ -230,6 +235,7 @@
             this.pictureBox_mostra_password.TabIndex = 10;
             this.pictureBox_mostra_password.TabStop = false;
             this.pictureBox_mostra_password.Click += new System.EventHandler(this.pictureBox_mostra_password_Click);
+            this.pictureBox_mostra_password.MouseHover += new System.EventHandler(this.pictureBox_mostra_password_MouseHover);
             // 
             // label7
             // 
@@ -239,7 +245,7 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label7.Location = new System.Drawing.Point(259, 378);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 16);
+            this.label7.Size = new System.Drawing.Size(101, 16);
             this.label7.TabIndex = 15;
             this.label7.Text = "Visualizza carte";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -387,5 +393,8 @@
         private button button_autorizzazioni;
         private System.Windows.Forms.PictureBox pictureBox4;
         private panel.panel panel2;
+        private System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip toolTip2;
     }
 }

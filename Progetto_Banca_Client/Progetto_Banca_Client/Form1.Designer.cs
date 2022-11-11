@@ -86,7 +86,7 @@
             this.label_user.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label_user.Location = new System.Drawing.Point(93, 217);
             this.label_user.Name = "label_user";
-            this.label_user.Size = new System.Drawing.Size(70, 16);
+            this.label_user.Size = new System.Drawing.Size(71, 16);
             this.label_user.TabIndex = 5;
             this.label_user.Text = "Username:";
             // 
@@ -98,7 +98,7 @@
             this.label_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label_password.Location = new System.Drawing.Point(95, 281);
             this.label_password.Name = "label_password";
-            this.label_password.Size = new System.Drawing.Size(68, 16);
+            this.label_password.Size = new System.Drawing.Size(69, 16);
             this.label_password.TabIndex = 6;
             this.label_password.Text = "Password:";
             // 
@@ -215,7 +215,7 @@
             this.linkLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel.Location = new System.Drawing.Point(204, 447);
             this.linkLabel.Name = "linkLabel";
-            this.linkLabel.Size = new System.Drawing.Size(120, 16);
+            this.linkLabel.Size = new System.Drawing.Size(121, 16);
             this.linkLabel.TabIndex = 15;
             this.linkLabel.TabStop = true;
             this.linkLabel.Text = "Richiedi assistenza";
@@ -262,7 +262,6 @@
 
         private System.Windows.Forms.PictureBox pictureBox_bcc;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox_username;
         private System.Windows.Forms.TextBox textBox_password;
         private System.Windows.Forms.Label label_user;
         private System.Windows.Forms.Label label_password;
@@ -274,6 +273,7 @@
         private button button_accedi;
         private System.Windows.Forms.Label label_error;
         private System.Windows.Forms.LinkLabel linkLabel;
+        public System.Windows.Forms.TextBox textBox_username;
     }
 }
 

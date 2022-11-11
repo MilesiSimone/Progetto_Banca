@@ -65,7 +65,7 @@ namespace Progetto_Banca_Client
         {
             if(textBox_username.Text == "u1" && textBox_password.Text == "u1")
             {
-                Form2 f2 = new Form2();
+                Form2 f2 = new Form2(this);
                 f2.Show();
                 this.Hide();
             }

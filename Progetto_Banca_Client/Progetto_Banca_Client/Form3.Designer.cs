@@ -173,7 +173,7 @@
             this.label_date.AutoSize = true;
             this.label_date.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_date.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label_date.Location = new System.Drawing.Point(58, 539);
+            this.label_date.Location = new System.Drawing.Point(26, 539);
             this.label_date.Name = "label_date";
             this.label_date.Size = new System.Drawing.Size(65, 15);
             this.label_date.TabIndex = 9;
@@ -243,7 +243,7 @@
             this.label_num_carta.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_num_carta.Location = new System.Drawing.Point(282, 408);
             this.label_num_carta.Name = "label_num_carta";
-            this.label_num_carta.Size = new System.Drawing.Size(93, 16);
+            this.label_num_carta.Size = new System.Drawing.Size(94, 16);
             this.label_num_carta.TabIndex = 15;
             this.label_num_carta.Text = "Numero carta";
             this.label_num_carta.Visible = false;
@@ -270,7 +270,7 @@
             this.checkBox_bon_istantaneo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox_bon_istantaneo.Location = new System.Drawing.Point(648, 343);
             this.checkBox_bon_istantaneo.Name = "checkBox_bon_istantaneo";
-            this.checkBox_bon_istantaneo.Size = new System.Drawing.Size(136, 20);
+            this.checkBox_bon_istantaneo.Size = new System.Drawing.Size(137, 20);
             this.checkBox_bon_istantaneo.TabIndex = 11;
             this.checkBox_bon_istantaneo.Text = "Bonifico istantaneo";
             this.checkBox_bon_istantaneo.UseVisualStyleBackColor = true;
@@ -283,7 +283,7 @@
             this.checkBox_bon_ordinario.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox_bon_ordinario.Location = new System.Drawing.Point(648, 309);
             this.checkBox_bon_ordinario.Name = "checkBox_bon_ordinario";
-            this.checkBox_bon_ordinario.Size = new System.Drawing.Size(125, 20);
+            this.checkBox_bon_ordinario.Size = new System.Drawing.Size(126, 20);
             this.checkBox_bon_ordinario.TabIndex = 10;
             this.checkBox_bon_ordinario.Text = "Bonifico ordinario";
             this.checkBox_bon_ordinario.UseVisualStyleBackColor = true;
@@ -296,7 +296,7 @@
             this.label_tipo_bon.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_tipo_bon.Location = new System.Drawing.Point(645, 278);
             this.label_tipo_bon.Name = "label_tipo_bon";
-            this.label_tipo_bon.Size = new System.Drawing.Size(182, 16);
+            this.label_tipo_bon.Size = new System.Drawing.Size(183, 16);
             this.label_tipo_bon.TabIndex = 9;
             this.label_tipo_bon.Text = "Seleziona il tipo di bonifico";
             this.label_tipo_bon.Visible = false;
@@ -331,7 +331,7 @@
             this.label_causale.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_causale.Location = new System.Drawing.Point(282, 351);
             this.label_causale.Name = "label_causale";
-            this.label_causale.Size = new System.Drawing.Size(58, 16);
+            this.label_causale.Size = new System.Drawing.Size(59, 16);
             this.label_causale.TabIndex = 6;
             this.label_causale.Text = "Causale";
             this.label_causale.Visible = false;
@@ -342,7 +342,7 @@
             this.label_importo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_importo.Location = new System.Drawing.Point(282, 300);
             this.label_importo.Name = "label_importo";
-            this.label_importo.Size = new System.Drawing.Size(56, 16);
+            this.label_importo.Size = new System.Drawing.Size(57, 16);
             this.label_importo.TabIndex = 5;
             this.label_importo.Text = "Importo";
             this.label_importo.Visible = false;
@@ -353,7 +353,7 @@
             this.label_dati.Font = new System.Drawing.Font("Arial", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_dati.Location = new System.Drawing.Point(300, 265);
             this.label_dati.Name = "label_dati";
-            this.label_dati.Size = new System.Drawing.Size(130, 16);
+            this.label_dati.Size = new System.Drawing.Size(131, 16);
             this.label_dati.TabIndex = 4;
             this.label_dati.Text = "Dati dell\'operazione";
             this.label_dati.Visible = false;
@@ -377,7 +377,7 @@
             this.label_conto_ben.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_conto_ben.Location = new System.Drawing.Point(282, 151);
             this.label_conto_ben.Name = "label_conto_ben";
-            this.label_conto_ben.Size = new System.Drawing.Size(148, 16);
+            this.label_conto_ben.Size = new System.Drawing.Size(149, 16);
             this.label_conto_ben.TabIndex = 2;
             this.label_conto_ben.Text = "Conto del beneficiario";
             this.label_conto_ben.Visible = false;
@@ -388,7 +388,7 @@
             this.checkBox_det_fisc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox_det_fisc.Location = new System.Drawing.Point(648, 186);
             this.checkBox_det_fisc.Name = "checkBox_det_fisc";
-            this.checkBox_det_fisc.Size = new System.Drawing.Size(199, 20);
+            this.checkBox_det_fisc.Size = new System.Drawing.Size(200, 20);
             this.checkBox_det_fisc.TabIndex = 1;
             this.checkBox_det_fisc.Text = "Bonifico per detrazione fiscale";
             this.checkBox_det_fisc.UseVisualStyleBackColor = true;
@@ -400,7 +400,7 @@
             this.label_det_fisc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_det_fisc.Location = new System.Drawing.Point(645, 164);
             this.label_det_fisc.Name = "label_det_fisc";
-            this.label_det_fisc.Size = new System.Drawing.Size(121, 16);
+            this.label_det_fisc.Size = new System.Drawing.Size(122, 16);
             this.label_det_fisc.TabIndex = 0;
             this.label_det_fisc.Text = "Detrazione fiscale";
             this.label_det_fisc.Visible = false;

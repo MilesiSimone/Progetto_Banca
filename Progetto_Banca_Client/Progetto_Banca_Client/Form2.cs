@@ -13,10 +13,13 @@ namespace Progetto_Banca_Client
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        Form1 f1;
+
+        public Form2(Form1 f1)
         {
             InitializeComponent();
             CheckForIllegalCrossThreadCalls = false;
+            label_utente.Text = f1.textBox_username.Text;
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -104,6 +107,16 @@ namespace Progetto_Banca_Client
         {
             Form3 f3 = new Form3();
             f3.Show();
+        }
+
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.SetToolTip(pictureBox1, "Assistenza");
+        }
+
+        private void pictureBox_mostra_password_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(pictureBox_mostra_password, "Mostra/Nascondi saldo");
         }
     }
 }
