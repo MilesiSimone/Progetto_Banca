@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -15,7 +16,7 @@ namespace Progetto_Banca_Client
 {
     public partial class Form3 : Form
     {
-        private Form activeForm;
+        int s = 0;
 
         public Form3()
         {
@@ -39,9 +40,9 @@ namespace Progetto_Banca_Client
 
         private void textBox_importo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
             {
-                if(textBox_importo.Text != "" && (e.KeyChar != '.'))
+                if(textBox_importo.Text != "" && (e.KeyChar != ','))
                 {
                     e.Handled = true;
                 }
@@ -86,48 +87,86 @@ namespace Progetto_Banca_Client
 
         private void textBox_importo_Click(object sender, EventArgs e)
         {
-            textBox_importo.Text = "";
-        }
-
-        private void textBox_iban_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Form3_Load(object sender, EventArgs e)
-        {
-
+            if(textBox_importo.Text == "0,00 €")
+            {
+                textBox_importo.Text = "";
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (s == 3)
+            {
+                button3.ForeColor = Color.Black;
+                label_dati_ricarica.Visible = false;
+                label_num_carta.Visible = false;
+                textBox_num_carta.Visible = false;
+                label_importo.Visible = false;
+                textBox_importo.Visible = false;
+                button_invia_ricarica.Visible = false;
+            }
+            else if(s == 4 || s == 2)
+            {
+                button2.ForeColor = Color.Black;
+                button4.ForeColor = Color.Black;
+                pictureBox_att.Visible = false;
+                label_att_1.Visible = false;
+                label_att_2.Visible = false;
+                button_invia_ricarica.Visible = false;
+            }
+            s = 1;
             button1.ForeColor = Color.Green;
             label_conto_ben.Visible = true;
             textBox_iban.Visible = true;
-            //f_bon.label_dati.Visible = true;
-            //f_bon.label_importo.Visible = true;
-            //f_bon.textBox_importo.Visible = true;
-            //f_bon.label_causale.Visible = true;
-            //f_bon.textBox_causale.Visible = true;
-            //f_bon.label_tipo_bon.Visible = true;
-            //f_bon.checkBox_det_fisc.Visible = true;
-            //f_bon.label_det_fisc.Visible = true;
-            //f_bon.checkBox_bon_ordinario.Visible = true;
-            //f_bon.checkBox_bon_istantaneo.Visible = true;
-            //f_bon.button_invia_bon.Visible = true;
+            label_dati.Visible = true;
+            label_importo.Visible = true;
+            textBox_importo.Visible = true;
+            label_causale.Visible = true;
+            textBox_causale.Visible = true;
+            label_det_fisc.Visible = true;
+            checkBox_det_fisc.Visible = true;
+            label_tipo_bon.Visible = true;
+            checkBox_bon_ordinario.Visible = true;
+            checkBox_bon_istantaneo.Visible = true;
+            button_invia_bon.Visible = true;
            
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
-            //f_bon.label_num_carta.Visible = true;
-            //f_bon.textBox_num_carta.Visible = true;
-        }
-
-        private void textBox_importo_TextChanged(object sender, EventArgs e)
-        {
-
+            if (s == 1)
+            {
+                button1.ForeColor = Color.Black;
+                label_conto_ben.Visible = false;
+                textBox_iban.Visible = false;
+                label_dati.Visible = false;
+                label_importo.Visible = false;
+                textBox_importo.Visible = false;
+                label_causale.Visible = false;
+                textBox_causale.Visible = false;
+                label_det_fisc.Visible = false;
+                checkBox_det_fisc.Visible = false;
+                label_tipo_bon.Visible = false;
+                checkBox_bon_ordinario.Visible = false;
+                checkBox_bon_istantaneo.Visible = false;
+                button_invia_bon.Visible = false;
+            }
+            else if(s == 2 || s == 4)
+            {
+                button2.ForeColor = Color.Black;
+                button4.ForeColor = Color.Black;
+                pictureBox_att.Visible = false;
+                label_att_1.Visible = false;
+                label_att_2.Visible = false;
+            }
+            s = 3;
+            button3.ForeColor = Color.Green;
+            label_dati_ricarica.Visible = true;
+            label_num_carta.Visible = true;
+            textBox_num_carta.Visible = true;
+            label_importo.Visible = true;
+            textBox_importo.Visible = true;
+            button_invia_ricarica.Visible = true;
         }
 
         private void textBox_iban_KeyPress(object sender, KeyPressEventArgs e)
@@ -138,38 +177,133 @@ namespace Progetto_Banca_Client
             }
         }
 
-        private void textBox_num_carta_TextChanged(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void checkBox_bon_ordinario_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox_bon_istantaneo.Checked == true)
+            if (s == 1)
             {
-                checkBox_bon_istantaneo.Checked = false;
-                checkBox_bon_ordinario.Checked = true;
+                button1.ForeColor = Color.Black;
+                label_conto_ben.Visible = false;
+                textBox_iban.Visible = false;
+                label_dati.Visible = false;
+                label_importo.Visible = false;
+                textBox_importo.Visible = false;
+                label_causale.Visible = false;
+                textBox_causale.Visible = false;
+                label_det_fisc.Visible = false;
+                checkBox_det_fisc.Visible = false;
+                label_tipo_bon.Visible = false;
+                checkBox_bon_ordinario.Visible = false;
+                checkBox_bon_istantaneo.Visible = false;
+                button_invia_bon.Visible = false;
             }
-            
+            else if (s == 3)
+            {
+                button3.ForeColor = Color.Black;
+                label_dati_ricarica.Visible = false;
+                label_num_carta.Visible = false;
+                textBox_num_carta.Visible = false;
+                label_importo.Visible = false;
+                textBox_importo.Visible = false;
+                button_invia_ricarica.Visible = false;
+            }
+            else if (s == 4)
+            {
+                button4.ForeColor = Color.Black;
+                pictureBox_att.Visible = false;
+                label_att_1.Visible = false;
+                label_att_2.Visible = false;
+            }
+            s = 2;
+            button2.ForeColor = Color.Green;
+            pictureBox_att.Visible = true;
+            label_att_1.Visible = true;
+            label_att_2.Visible = true;
         }
 
-        private void checkBox_bon_istantaneo_CheckedChanged(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (s == 1)
+            {
+                button1.ForeColor = Color.Black;
+                label_conto_ben.Visible = false;
+                textBox_iban.Visible = false;
+                label_dati.Visible = false;
+                label_importo.Visible = false;
+                textBox_importo.Visible = false;
+                label_causale.Visible = false;
+                textBox_causale.Visible = false;
+                label_det_fisc.Visible = false;
+                checkBox_det_fisc.Visible = false;
+                label_tipo_bon.Visible = false;
+                checkBox_bon_ordinario.Visible = false;
+                checkBox_bon_istantaneo.Visible = false;
+                button_invia_bon.Visible = false;
+            }
+            else if (s == 3)
+            {
+                button3.ForeColor = Color.Black;
+                label_dati_ricarica.Visible = false;
+                label_num_carta.Visible = false;
+                textBox_num_carta.Visible = false;
+                label_importo.Visible = false;
+                textBox_importo.Visible = false;
+                button_invia_ricarica.Visible = false;
+            }
+            else if (s == 2)
+            {
+                button2.ForeColor = Color.Black;
+                pictureBox_att.Visible = false;
+                label_att_1.Visible = false;
+                label_att_2.Visible = false;
+            }
+            s = 4;
+            button4.ForeColor = Color.Green;
+            pictureBox_att.Visible = true;
+            label_att_1.Visible = true;
+            label_att_2.Visible = true;
+        }
+
+        private void textBox_importo_MouseLeave(object sender, EventArgs e)
+        {
+            if (textBox_importo.Text != "")
+            {
+                Double value;
+                if (Double.TryParse(textBox_importo.Text, out value))
+                    textBox_importo.Text = String.Format(System.Globalization.CultureInfo.CurrentCulture, "{0:C2}", value);
+                else
+                    textBox_importo.Text = String.Empty;
+            }
+        }
+
+        private void checkBox_bon_istantaneo_Click(object sender, EventArgs e)
         {
             if (checkBox_bon_ordinario.Checked == true)
             {
                 checkBox_bon_ordinario.Checked = false;
                 checkBox_bon_istantaneo.Checked = true;
             }
+            else
+            {
+                checkBox_bon_istantaneo.Checked = true;
+            }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void checkBox_bon_ordinario_Click(object sender, EventArgs e)
         {
-           
+            if (checkBox_bon_istantaneo.Checked == true)
+            {
+                checkBox_bon_istantaneo.Checked = false;
+                checkBox_bon_ordinario.Checked = true;
+            }
+            else
+            {
+                checkBox_bon_ordinario.Checked = true;
+            }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button_invia_bon_Click(object sender, EventArgs e)
         {
-           
+
         }
     }
 }

@@ -13,8 +13,6 @@ namespace Progetto_Banca_Client
 {
     public partial class Form2 : Form
     {
-        Form1 f1;
-
         public Form2(Form1 f1)
         {
             InitializeComponent();
