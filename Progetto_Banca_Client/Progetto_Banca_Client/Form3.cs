@@ -15,6 +15,7 @@ namespace Progetto_Banca_Client
 {
     public partial class Form3 : Form
     {
+        private Form activeForm;
 
         public Form3()
         {
@@ -103,23 +104,25 @@ namespace Progetto_Banca_Client
             button1.ForeColor = Color.Green;
             label_conto_ben.Visible = true;
             textBox_iban.Visible = true;
-            label_dati.Visible = true;
-            label_importo.Visible = true;
-            textBox_importo.Visible = true;
-            label_causale.Visible = true;
-            textBox_causale.Visible = true;
-            label_tipo_bon.Visible = true;
-            checkBox_det_fisc.Visible = true;
-            label_det_fisc.Visible = true;
-            checkBox_bon_ordinario.Visible = true;
-            checkBox_bon_istantaneo.Visible = true;
-            button_invia_bon.Visible = true;
+            //f_bon.label_dati.Visible = true;
+            //f_bon.label_importo.Visible = true;
+            //f_bon.textBox_importo.Visible = true;
+            //f_bon.label_causale.Visible = true;
+            //f_bon.textBox_causale.Visible = true;
+            //f_bon.label_tipo_bon.Visible = true;
+            //f_bon.checkBox_det_fisc.Visible = true;
+            //f_bon.label_det_fisc.Visible = true;
+            //f_bon.checkBox_bon_ordinario.Visible = true;
+            //f_bon.checkBox_bon_istantaneo.Visible = true;
+            //f_bon.button_invia_bon.Visible = true;
+           
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            label_num_carta.Visible = true;
-            textBox_num_carta.Visible = true;
+            
+            //f_bon.label_num_carta.Visible = true;
+            //f_bon.textBox_num_carta.Visible = true;
         }
 
         private void textBox_importo_TextChanged(object sender, EventArgs e)
@@ -157,8 +160,16 @@ namespace Progetto_Banca_Client
                 checkBox_bon_ordinario.Checked = false;
                 checkBox_bon_istantaneo.Checked = true;
             }
-            
-          
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

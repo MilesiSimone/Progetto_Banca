@@ -34,29 +34,16 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel_logo = new System.Windows.Forms.Panel();
             this.label_date = new System.Windows.Forms.Label();
+            this.panel_logo = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel_bonifici = new System.Windows.Forms.Panel();
-            this.textBox_num_carta = new System.Windows.Forms.TextBox();
-            this.label_num_carta = new System.Windows.Forms.Label();
-            this.button_invia_bon = new Progetto_Banca_Client.button();
-            this.checkBox_bon_istantaneo = new System.Windows.Forms.CheckBox();
-            this.checkBox_bon_ordinario = new System.Windows.Forms.CheckBox();
-            this.label_tipo_bon = new System.Windows.Forms.Label();
-            this.textBox_causale = new System.Windows.Forms.TextBox();
-            this.textBox_importo = new System.Windows.Forms.TextBox();
-            this.label_causale = new System.Windows.Forms.Label();
-            this.label_importo = new System.Windows.Forms.Label();
-            this.label_dati = new System.Windows.Forms.Label();
-            this.textBox_iban = new System.Windows.Forms.TextBox();
             this.label_conto_ben = new System.Windows.Forms.Label();
-            this.checkBox_det_fisc = new System.Windows.Forms.CheckBox();
-            this.label_det_fisc = new System.Windows.Forms.Label();
+            this.textBox_iban = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
+            this.panel_logo.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel_bonifici.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -66,8 +53,8 @@
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.panel_logo);
             this.panel2.Controls.Add(this.label_date);
+            this.panel2.Controls.Add(this.panel_logo);
             this.panel2.ForeColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -93,6 +80,7 @@
             this.button4.Text = "Pagamenti";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -134,6 +122,7 @@
             this.button2.Text = "F24";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -156,17 +145,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // panel_logo
-            // 
-            this.panel_logo.BackColor = System.Drawing.Color.White;
-            this.panel_logo.BackgroundImage = global::Progetto_Banca_Client.Properties.Resources.LogoBcc;
-            this.panel_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel_logo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_logo.Location = new System.Drawing.Point(0, 0);
-            this.panel_logo.Name = "panel_logo";
-            this.panel_logo.Size = new System.Drawing.Size(180, 95);
-            this.panel_logo.TabIndex = 2;
-            // 
             // label_date
             // 
             this.label_date.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -178,6 +156,26 @@
             this.label_date.Size = new System.Drawing.Size(65, 15);
             this.label_date.TabIndex = 9;
             this.label_date.Text = "label_date";
+            // 
+            // panel_logo
+            // 
+            this.panel_logo.BackColor = System.Drawing.Color.White;
+            this.panel_logo.BackgroundImage = global::Progetto_Banca_Client.Properties.Resources.LogoBcc;
+            this.panel_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel_logo.Controls.Add(this.panel3);
+            this.panel_logo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_logo.Location = new System.Drawing.Point(0, 0);
+            this.panel_logo.Name = "panel_logo";
+            this.panel_logo.Size = new System.Drawing.Size(180, 95);
+            this.panel_logo.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.LightCoral;
+            this.panel3.Location = new System.Drawing.Point(178, 95);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(759, 470);
+            this.panel3.TabIndex = 0;
             // 
             // panel1
             // 
@@ -201,209 +199,23 @@
             this.label1.Text = "OPERAZIONI";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel_bonifici
-            // 
-            this.panel_bonifici.BackColor = System.Drawing.Color.White;
-            this.panel_bonifici.Controls.Add(this.textBox_num_carta);
-            this.panel_bonifici.Controls.Add(this.label_num_carta);
-            this.panel_bonifici.Controls.Add(this.button_invia_bon);
-            this.panel_bonifici.Controls.Add(this.checkBox_bon_istantaneo);
-            this.panel_bonifici.Controls.Add(this.checkBox_bon_ordinario);
-            this.panel_bonifici.Controls.Add(this.label_tipo_bon);
-            this.panel_bonifici.Controls.Add(this.textBox_causale);
-            this.panel_bonifici.Controls.Add(this.textBox_importo);
-            this.panel_bonifici.Controls.Add(this.label_causale);
-            this.panel_bonifici.Controls.Add(this.label_importo);
-            this.panel_bonifici.Controls.Add(this.label_dati);
-            this.panel_bonifici.Controls.Add(this.textBox_iban);
-            this.panel_bonifici.Controls.Add(this.label_conto_ben);
-            this.panel_bonifici.Controls.Add(this.checkBox_det_fisc);
-            this.panel_bonifici.Controls.Add(this.label_det_fisc);
-            this.panel_bonifici.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_bonifici.Location = new System.Drawing.Point(0, 0);
-            this.panel_bonifici.Name = "panel_bonifici";
-            this.panel_bonifici.Size = new System.Drawing.Size(937, 563);
-            this.panel_bonifici.TabIndex = 3;
-            // 
-            // textBox_num_carta
-            // 
-            this.textBox_num_carta.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_num_carta.Location = new System.Drawing.Point(285, 427);
-            this.textBox_num_carta.MaxLength = 16;
-            this.textBox_num_carta.Name = "textBox_num_carta";
-            this.textBox_num_carta.Size = new System.Drawing.Size(170, 25);
-            this.textBox_num_carta.TabIndex = 16;
-            this.textBox_num_carta.Visible = false;
-            this.textBox_num_carta.TextChanged += new System.EventHandler(this.textBox_num_carta_TextChanged);
-            this.textBox_num_carta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_num_carta_KeyPress);
-            // 
-            // label_num_carta
-            // 
-            this.label_num_carta.AutoSize = true;
-            this.label_num_carta.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_num_carta.Location = new System.Drawing.Point(282, 408);
-            this.label_num_carta.Name = "label_num_carta";
-            this.label_num_carta.Size = new System.Drawing.Size(94, 16);
-            this.label_num_carta.TabIndex = 15;
-            this.label_num_carta.Text = "Numero carta";
-            this.label_num_carta.Visible = false;
-            // 
-            // button_invia_bon
-            // 
-            this.button_invia_bon.BackColor = System.Drawing.Color.Green;
-            this.button_invia_bon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_invia_bon.FlatAppearance.BorderSize = 0;
-            this.button_invia_bon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_invia_bon.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_invia_bon.ForeColor = System.Drawing.Color.White;
-            this.button_invia_bon.Location = new System.Drawing.Point(714, 443);
-            this.button_invia_bon.Name = "button_invia_bon";
-            this.button_invia_bon.Size = new System.Drawing.Size(165, 51);
-            this.button_invia_bon.TabIndex = 14;
-            this.button_invia_bon.Text = "INVIA";
-            this.button_invia_bon.UseVisualStyleBackColor = false;
-            this.button_invia_bon.Visible = false;
-            // 
-            // checkBox_bon_istantaneo
-            // 
-            this.checkBox_bon_istantaneo.AutoSize = true;
-            this.checkBox_bon_istantaneo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_bon_istantaneo.Location = new System.Drawing.Point(648, 343);
-            this.checkBox_bon_istantaneo.Name = "checkBox_bon_istantaneo";
-            this.checkBox_bon_istantaneo.Size = new System.Drawing.Size(137, 20);
-            this.checkBox_bon_istantaneo.TabIndex = 11;
-            this.checkBox_bon_istantaneo.Text = "Bonifico istantaneo";
-            this.checkBox_bon_istantaneo.UseVisualStyleBackColor = true;
-            this.checkBox_bon_istantaneo.Visible = false;
-            this.checkBox_bon_istantaneo.CheckedChanged += new System.EventHandler(this.checkBox_bon_istantaneo_CheckedChanged);
-            // 
-            // checkBox_bon_ordinario
-            // 
-            this.checkBox_bon_ordinario.AutoSize = true;
-            this.checkBox_bon_ordinario.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_bon_ordinario.Location = new System.Drawing.Point(648, 309);
-            this.checkBox_bon_ordinario.Name = "checkBox_bon_ordinario";
-            this.checkBox_bon_ordinario.Size = new System.Drawing.Size(126, 20);
-            this.checkBox_bon_ordinario.TabIndex = 10;
-            this.checkBox_bon_ordinario.Text = "Bonifico ordinario";
-            this.checkBox_bon_ordinario.UseVisualStyleBackColor = true;
-            this.checkBox_bon_ordinario.Visible = false;
-            this.checkBox_bon_ordinario.CheckedChanged += new System.EventHandler(this.checkBox_bon_ordinario_CheckedChanged);
-            // 
-            // label_tipo_bon
-            // 
-            this.label_tipo_bon.AutoSize = true;
-            this.label_tipo_bon.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_tipo_bon.Location = new System.Drawing.Point(645, 278);
-            this.label_tipo_bon.Name = "label_tipo_bon";
-            this.label_tipo_bon.Size = new System.Drawing.Size(183, 16);
-            this.label_tipo_bon.TabIndex = 9;
-            this.label_tipo_bon.Text = "Seleziona il tipo di bonifico";
-            this.label_tipo_bon.Visible = false;
-            // 
-            // textBox_causale
-            // 
-            this.textBox_causale.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_causale.Location = new System.Drawing.Point(285, 370);
-            this.textBox_causale.Name = "textBox_causale";
-            this.textBox_causale.Size = new System.Drawing.Size(170, 25);
-            this.textBox_causale.TabIndex = 8;
-            this.textBox_causale.Visible = false;
-            // 
-            // textBox_importo
-            // 
-            this.textBox_importo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox_importo.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_importo.Location = new System.Drawing.Point(285, 319);
-            this.textBox_importo.Name = "textBox_importo";
-            this.textBox_importo.Size = new System.Drawing.Size(170, 25);
-            this.textBox_importo.TabIndex = 7;
-            this.textBox_importo.Text = "0,00 €";
-            this.textBox_importo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox_importo.Visible = false;
-            this.textBox_importo.Click += new System.EventHandler(this.textBox_importo_Click);
-            this.textBox_importo.TextChanged += new System.EventHandler(this.textBox_importo_TextChanged);
-            this.textBox_importo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_importo_KeyPress);
-            // 
-            // label_causale
-            // 
-            this.label_causale.AutoSize = true;
-            this.label_causale.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_causale.Location = new System.Drawing.Point(282, 351);
-            this.label_causale.Name = "label_causale";
-            this.label_causale.Size = new System.Drawing.Size(59, 16);
-            this.label_causale.TabIndex = 6;
-            this.label_causale.Text = "Causale";
-            this.label_causale.Visible = false;
-            // 
-            // label_importo
-            // 
-            this.label_importo.AutoSize = true;
-            this.label_importo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_importo.Location = new System.Drawing.Point(282, 300);
-            this.label_importo.Name = "label_importo";
-            this.label_importo.Size = new System.Drawing.Size(57, 16);
-            this.label_importo.TabIndex = 5;
-            this.label_importo.Text = "Importo";
-            this.label_importo.Visible = false;
-            // 
-            // label_dati
-            // 
-            this.label_dati.AutoSize = true;
-            this.label_dati.Font = new System.Drawing.Font("Arial", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_dati.Location = new System.Drawing.Point(300, 265);
-            this.label_dati.Name = "label_dati";
-            this.label_dati.Size = new System.Drawing.Size(131, 16);
-            this.label_dati.TabIndex = 4;
-            this.label_dati.Text = "Dati dell\'operazione";
-            this.label_dati.Visible = false;
-            // 
-            // textBox_iban
-            // 
-            this.textBox_iban.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox_iban.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_iban.Location = new System.Drawing.Point(285, 170);
-            this.textBox_iban.MaxLength = 27;
-            this.textBox_iban.Name = "textBox_iban";
-            this.textBox_iban.Size = new System.Drawing.Size(269, 25);
-            this.textBox_iban.TabIndex = 3;
-            this.textBox_iban.Visible = false;
-            this.textBox_iban.TextChanged += new System.EventHandler(this.textBox_iban_TextChanged);
-            this.textBox_iban.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_iban_KeyPress);
-            // 
             // label_conto_ben
             // 
             this.label_conto_ben.AutoSize = true;
             this.label_conto_ben.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_conto_ben.Location = new System.Drawing.Point(282, 151);
+            this.label_conto_ben.Location = new System.Drawing.Point(280, 130);
             this.label_conto_ben.Name = "label_conto_ben";
-            this.label_conto_ben.Size = new System.Drawing.Size(149, 16);
-            this.label_conto_ben.TabIndex = 2;
-            this.label_conto_ben.Text = "Conto del beneficiario";
-            this.label_conto_ben.Visible = false;
+            this.label_conto_ben.Size = new System.Drawing.Size(125, 16);
+            this.label_conto_ben.TabIndex = 3;
+            this.label_conto_ben.Text = "Conto Beneficiario";
             // 
-            // checkBox_det_fisc
+            // textBox_iban
             // 
-            this.checkBox_det_fisc.AutoSize = true;
-            this.checkBox_det_fisc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_det_fisc.Location = new System.Drawing.Point(648, 186);
-            this.checkBox_det_fisc.Name = "checkBox_det_fisc";
-            this.checkBox_det_fisc.Size = new System.Drawing.Size(200, 20);
-            this.checkBox_det_fisc.TabIndex = 1;
-            this.checkBox_det_fisc.Text = "Bonifico per detrazione fiscale";
-            this.checkBox_det_fisc.UseVisualStyleBackColor = true;
-            this.checkBox_det_fisc.Visible = false;
-            // 
-            // label_det_fisc
-            // 
-            this.label_det_fisc.AutoSize = true;
-            this.label_det_fisc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_det_fisc.Location = new System.Drawing.Point(645, 164);
-            this.label_det_fisc.Name = "label_det_fisc";
-            this.label_det_fisc.Size = new System.Drawing.Size(122, 16);
-            this.label_det_fisc.TabIndex = 0;
-            this.label_det_fisc.Text = "Detrazione fiscale";
-            this.label_det_fisc.Visible = false;
+            this.textBox_iban.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_iban.Location = new System.Drawing.Point(283, 149);
+            this.textBox_iban.Name = "textBox_iban";
+            this.textBox_iban.Size = new System.Drawing.Size(209, 22);
+            this.textBox_iban.TabIndex = 4;
             // 
             // Form3
             // 
@@ -411,9 +223,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(937, 563);
+            this.Controls.Add(this.textBox_iban);
+            this.Controls.Add(this.label_conto_ben);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel_bonifici);
             this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -424,11 +237,11 @@
             this.Load += new System.EventHandler(this.Form3_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel_logo.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel_bonifici.ResumeLayout(false);
-            this.panel_bonifici.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -442,21 +255,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel_bonifici;
-        private button button_invia_bon;
-        private System.Windows.Forms.CheckBox checkBox_bon_istantaneo;
-        private System.Windows.Forms.CheckBox checkBox_bon_ordinario;
-        private System.Windows.Forms.Label label_tipo_bon;
-        private System.Windows.Forms.TextBox textBox_causale;
-        private System.Windows.Forms.TextBox textBox_importo;
-        private System.Windows.Forms.Label label_causale;
-        private System.Windows.Forms.Label label_importo;
-        private System.Windows.Forms.Label label_dati;
-        private System.Windows.Forms.TextBox textBox_iban;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label_conto_ben;
-        private System.Windows.Forms.CheckBox checkBox_det_fisc;
-        private System.Windows.Forms.Label label_det_fisc;
-        private System.Windows.Forms.TextBox textBox_num_carta;
-        private System.Windows.Forms.Label label_num_carta;
+        private System.Windows.Forms.TextBox textBox_iban;
     }
 }
