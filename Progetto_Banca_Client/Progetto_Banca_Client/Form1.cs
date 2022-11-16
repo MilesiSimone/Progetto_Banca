@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Sockets;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,7 +24,7 @@ namespace Progetto_Banca_Client
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -32,7 +34,7 @@ namespace Progetto_Banca_Client
 
         private void pictureBox_mostra_password_Click(object sender, EventArgs e)
         {
-            if(textBox_password.UseSystemPasswordChar == false)
+            if (textBox_password.UseSystemPasswordChar == false)
             {
                 textBox_password.UseSystemPasswordChar = true;
             }
@@ -63,23 +65,12 @@ namespace Progetto_Banca_Client
 
         private void button_accedi_Click(object sender, EventArgs e)
         {
-            if(textBox_username.Text == "u1" && textBox_password.Text == "u1")
-            {
-                Form2 f2 = new Form2(this);
-                f2.Show();
-                this.Hide();
-            }
-            else
-            {
-                label_error.Visible = true;
-                textBox_username.Text = "";
-                textBox_password.Text = "";
-            }
+           VerificaCredenziali();
         }
 
         private void button_accedi_KeyDown(object sender, KeyEventArgs e)
         {
-            
+
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -97,5 +88,76 @@ namespace Progetto_Banca_Client
         {
             toolTip.SetToolTip(pictureBox_mostra_password, "Mostra/Nascondi password");
         }
+
+        private void VerificaCredenziali()
+        {
+            // Data buffer for incoming data.  
+            byte[] bytes_ok = new byte[1024];
+            byte[] bytes_info = new byte[5000];
+
+            // Connect to a remote device.  
+            try
+            {
+                // Establish the remote endpoint for the socket.  
+                // This example uses port 11000 on the local computer.  
+                IPAddress ipAddress = System.Net.IPAddress.Parse("127.0.0.1");
+                IPEndPoint remoteEP = new IPEndPoint(ipAddress, 5000);
+
+                // Create a TCP/IP  socket.  
+                Socket sender = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
+
+                // Connect the socket to the remote endpoint. Catch any errors.  
+                try
+                {
+                    sender.Connect(remoteEP);
+
+                    // Encode the data string into a byte array.  
+                    byte[] msg = Encoding.ASCII.GetBytes(textBox_username.Text + ';' + textBox_password.Text + "<EOF>");
+
+                    // Send the data through the socket.  
+                    int bytesSent = sender.Send(msg);
+
+                    // Receive the response from the remote device.  
+                    int bytesRec = sender.Receive(bytes_ok);
+
+                    if(Encoding.ASCII.GetString(bytes_ok, 0, bytesRec) == "ok")
+                    {
+                        Form2 f2 = new Form2(this);
+                        f2.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        label_error.Visible = true;
+                        textBox_username.Text = "";
+                        textBox_password.Text = "";
+                    }
+
+                    string[] s = Encoding.ASCII.GetString(bytes_ok, 0, bytesRec).Split(';');
+                    // Release the socket.  
+                    sender.Shutdown(SocketShutdown.Both);
+                    sender.Close();
+
+                }
+                catch (ArgumentNullException ane)
+                {
+                    MessageBox.Show("ArgumentNullException : {0}", ane.ToString());
+                }
+                catch (SocketException se)
+                {
+                    MessageBox.Show("SocketException : {0}", se.ToString());
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Unexpected exception : {0}", e.ToString());
+                }
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+        }
     }
 }
+
