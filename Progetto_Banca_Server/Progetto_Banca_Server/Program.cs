@@ -11,7 +11,7 @@ public class SynchronousSocketListener
 
     // Incoming data from the client.  
     public static string data = null;
-    public static string fileName = "clienti.dat";
+    public static string fileName = "clienti.txt";
 
     public static void StartListening()
     {
@@ -37,14 +37,7 @@ public class SynchronousSocketListener
             // Start listening for connections.  
             while (true)
             {
-                using (StreamReader reader = new StreamReader(fileName))
-                {
-                    string line;
-                    while ((line = reader.ReadLine()) != null)
-                    {
-                        Console.WriteLine(line);
-                    }
-                }
+               
                 Console.WriteLine("Waiting for a connection...");
                 // Program is suspended while waiting for an incoming connection.  
                 Socket handler = listener.Accept();
@@ -60,15 +53,24 @@ public class SynchronousSocketListener
                         break;
                     }
                 }
-
                 string[] credenziali = data.Split(';');
-                // Show the data on the console.  
-                Console.WriteLine("Text received : {0}", credenziali[0]);
-                Console.WriteLine("Text received : {0}", credenziali[1]);
-                // Echo the data back to the client.  
-                byte[] msg = Encoding.ASCII.GetBytes("ok");
-                
+                string[] lines = File.ReadAllLines("clienti.txt");
+                string[] info;
+                string controllo = "no";
+                foreach (string line in lines)
+                {
+                    info = line.Split(';');
+                    if (credenziali[0] == info[0] && credenziali[1] == (info[1] + "<EOF>"))
+                    {
+                        controllo = "ok";
+                        Console.WriteLine("Accesso effettuato.");
+                        Console.WriteLine("Utente: " + credenziali[0]);
+                        break;
+                    }
+                }
 
+                // Echo the data back to the client.  
+                byte[] msg = Encoding.ASCII.GetBytes(controllo);
                 handler.Send(msg);
                 handler.Shutdown(SocketShutdown.Both);
                 handler.Close();

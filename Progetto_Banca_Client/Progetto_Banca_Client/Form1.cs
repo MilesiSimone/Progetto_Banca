@@ -14,7 +14,7 @@ namespace Progetto_Banca_Client
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        public Form1(Form2 f2)
         {
             InitializeComponent();
             DateTime thisDay = DateTime.Today;
@@ -134,6 +134,7 @@ namespace Progetto_Banca_Client
                     }
 
                     string[] s = Encoding.ASCII.GetString(bytes_ok, 0, bytesRec).Split(';');
+                    
                     // Release the socket.  
                     sender.Shutdown(SocketShutdown.Both);
                     sender.Close();

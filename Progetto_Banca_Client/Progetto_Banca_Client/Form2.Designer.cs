@@ -372,11 +372,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label_iban;
-        private System.Windows.Forms.Label label_utente;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label_saldodisp;
         private System.Windows.Forms.Label label_saldocont;
         private System.Windows.Forms.PictureBox pictureBox_mostra_password;
@@ -396,5 +392,9 @@
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ToolTip toolTip2;
+        public System.Windows.Forms.Label label_iban;
+        public System.Windows.Forms.Label label_utente;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label label3;
     }
 }
