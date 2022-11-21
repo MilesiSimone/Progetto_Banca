@@ -1,0 +1,15 @@
+C:\Users\UTENTE\Source\Repos\MilesiSimone\Progetto_Banca\Progetto_Banca_Server\Progetto_Banca_Server\bin\Debug\net6.0\Progetto_Banca_Server.exe
+C:\Users\UTENTE\Source\Repos\MilesiSimone\Progetto_Banca\Progetto_Banca_Server\Progetto_Banca_Server\bin\Debug\net6.0\Progetto_Banca_Server.deps.json
+C:\Users\UTENTE\Source\Repos\MilesiSimone\Progetto_Banca\Progetto_Banca_Server\Progetto_Banca_Server\bin\Debug\net6.0\Progetto_Banca_Server.runtimeconfig.json
+C:\Users\UTENTE\Source\Repos\MilesiSimone\Progetto_Banca\Progetto_Banca_Server\Progetto_Banca_Server\bin\Debug\net6.0\Progetto_Banca_Server.dll
+C:\Users\UTENTE\Source\Repos\MilesiSimone\Progetto_Banca\Progetto_Banca_Server\Progetto_Banca_Server\bin\Debug\net6.0\Progetto_Banca_Server.pdb
+C:\Users\UTENTE\Source\Repos\MilesiSimone\Progetto_Banca\Progetto_Banca_Server\Progetto_Banca_Server\obj\Debug\net6.0\Progetto_Banca_Server.csproj.AssemblyReference.cache
+C:\Users\UTENTE\Source\Repos\MilesiSimone\Progetto_Banca\Progetto_Banca_Server\Progetto_Banca_Server\obj\Debug\net6.0\Progetto_Banca_Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\UTENTE\Source\Repos\MilesiSimone\Progetto_Banca\Progetto_Banca_Server\Progetto_Banca_Server\obj\Debug\net6.0\Progetto_Banca_Server.AssemblyInfoInputs.cache
+C:\Users\UTENTE\Source\Repos\MilesiSimone\Progetto_Banca\Progetto_Banca_Server\Progetto_Banca_Server\obj\Debug\net6.0\Progetto_Banca_Server.AssemblyInfo.cs
+C:\Users\UTENTE\Source\Repos\MilesiSimone\Progetto_Banca\Progetto_Banca_Server\Progetto_Banca_Server\obj\Debug\net6.0\Progetto_Banca_Server.csproj.CoreCompileInputs.cache
+C:\Users\UTENTE\Source\Repos\MilesiSimone\Progetto_Banca\Progetto_Banca_Server\Progetto_Banca_Server\obj\Debug\net6.0\Progetto_Banca_Server.dll
+C:\Users\UTENTE\Source\Repos\MilesiSimone\Progetto_Banca\Progetto_Banca_Server\Progetto_Banca_Server\obj\Debug\net6.0\refint\Progetto_Banca_Server.dll
+C:\Users\UTENTE\Source\Repos\MilesiSimone\Progetto_Banca\Progetto_Banca_Server\Progetto_Banca_Server\obj\Debug\net6.0\Progetto_Banca_Server.pdb
+C:\Users\UTENTE\Source\Repos\MilesiSimone\Progetto_Banca\Progetto_Banca_Server\Progetto_Banca_Server\obj\Debug\net6.0\Progetto_Banca_Server.genruntimeconfig.cache
+C:\Users\UTENTE\Source\Repos\MilesiSimone\Progetto_Banca\Progetto_Banca_Server\Progetto_Banca_Server\obj\Debug\net6.0\ref\Progetto_Banca_Server.dll
