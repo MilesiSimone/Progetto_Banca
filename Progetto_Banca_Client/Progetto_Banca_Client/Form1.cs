@@ -14,7 +14,7 @@ namespace Progetto_Banca_Client
 {
     public partial class Form1 : Form
     {
-        public Form1(Form2 f2)
+        public Form1()
         {
             InitializeComponent();
             DateTime thisDay = DateTime.Today;
@@ -120,7 +120,11 @@ namespace Progetto_Banca_Client
                     // Receive the response from the remote device.  
                     int bytesRec = sender.Receive(bytes_ok);
 
-                    if(Encoding.ASCII.GetString(bytes_ok, 0, bytesRec) == "ok")
+                    string msg_server = Encoding.ASCII.GetString(bytes_ok, 0, bytesRec);
+                    MessageBox.Show(msg_server);
+                    string[] s = msg_server.Split(';');
+                    MessageBox.Show(s[0]);
+                    if (s[0] == "ok")
                     {
                         Form2 f2 = new Form2(this);
                         f2.Show();
@@ -132,8 +136,6 @@ namespace Progetto_Banca_Client
                         textBox_username.Text = "";
                         textBox_password.Text = "";
                     }
-
-                    string[] s = Encoding.ASCII.GetString(bytes_ok, 0, bytesRec).Split(';');
                     
                     // Release the socket.  
                     sender.Shutdown(SocketShutdown.Both);

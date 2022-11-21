@@ -55,7 +55,7 @@ public class SynchronousSocketListener
                 }
                 string[] credenziali = data.Split(';');
                 string[] lines = File.ReadAllLines("clienti.txt");
-                string[] info;
+                string[] info = new string[9];
                 string controllo = "no";
                 foreach (string line in lines)
                 {
@@ -69,8 +69,10 @@ public class SynchronousSocketListener
                     }
                 }
 
+                controllo = controllo + ";" + info[2] + ";" + info[3] + ";" + info[4] + ";" + info[5] + ";" + info[6] + ";" + info[7] + ";" + info[8];
                 // Echo the data back to the client.  
                 byte[] msg = Encoding.ASCII.GetBytes(controllo);
+                Console.WriteLine(controllo);
                 handler.Send(msg);
                 handler.Shutdown(SocketShutdown.Both);
                 handler.Close();
