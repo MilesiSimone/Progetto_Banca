@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label_saldo_disponibile = new System.Windows.Forms.Label();
+            this.label_saldo_contabile = new System.Windows.Forms.Label();
             this.label_saldodisp = new System.Windows.Forms.Label();
             this.label_saldocont = new System.Windows.Forms.Label();
             this.label_iban = new System.Windows.Forms.Label();
@@ -78,25 +78,25 @@
             this.label6.MouseLeave += new System.EventHandler(this.label6_MouseLeave);
             this.label6.MouseHover += new System.EventHandler(this.label6_MouseHover);
             // 
-            // label4
+            // label_saldo_disponibile
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(5, 209);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 32);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "1536,25 €";
+            this.label_saldo_disponibile.AutoSize = true;
+            this.label_saldo_disponibile.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_saldo_disponibile.Location = new System.Drawing.Point(5, 209);
+            this.label_saldo_disponibile.Name = "label_saldo_disponibile";
+            this.label_saldo_disponibile.Size = new System.Drawing.Size(135, 32);
+            this.label_saldo_disponibile.TabIndex = 7;
+            this.label_saldo_disponibile.Text = "1536,25 €";
             // 
-            // label3
+            // label_saldo_contabile
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 132);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 32);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "1536,25 €";
+            this.label_saldo_contabile.AutoSize = true;
+            this.label_saldo_contabile.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_saldo_contabile.Location = new System.Drawing.Point(3, 132);
+            this.label_saldo_contabile.Name = "label_saldo_contabile";
+            this.label_saldo_contabile.Size = new System.Drawing.Size(135, 32);
+            this.label_saldo_contabile.TabIndex = 6;
+            this.label_saldo_contabile.Text = "1536,25 €";
             // 
             // label_saldodisp
             // 
@@ -320,9 +320,9 @@
             this.panel2.BorderColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label_saldo_disponibile);
             this.panel2.Controls.Add(this.label_saldoNasc);
-            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label_saldo_contabile);
             this.panel2.Controls.Add(this.label_saldodisp);
             this.panel2.Controls.Add(this.label_utente);
             this.panel2.Controls.Add(this.label_saldocont);
@@ -394,7 +394,7 @@
         private System.Windows.Forms.ToolTip toolTip2;
         public System.Windows.Forms.Label label_iban;
         public System.Windows.Forms.Label label_utente;
-        public System.Windows.Forms.Label label4;
-        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label label_saldo_disponibile;
+        public System.Windows.Forms.Label label_saldo_contabile;
     }
 }

@@ -14,6 +14,9 @@ namespace Progetto_Banca_Client
 {
     public partial class Form1 : Form
     {
+        public string[] s = new string[9];
+        string nome;
+
         public Form1()
         {
             InitializeComponent();
@@ -121,14 +124,17 @@ namespace Progetto_Banca_Client
                     int bytesRec = sender.Receive(bytes_ok);
 
                     string msg_server = Encoding.ASCII.GetString(bytes_ok, 0, bytesRec);
-                    MessageBox.Show(msg_server);
-                    string[] s = msg_server.Split(';');
-                    MessageBox.Show(s[0]);
+                    s = msg_server.Split(';');
+                    nome = s[2] + " " + s[1];
                     if (s[0] == "ok")
                     {
                         Form2 f2 = new Form2(this);
                         f2.Show();
                         this.Hide();
+                        f2.label_utente.Text = nome;
+                        f2.label_iban.Text = s[3];
+                        f2.label_saldo_contabile.Text = s[4] + " €";
+                        f2.label_saldo_disponibile.Text = s[5] + " €";
                     }
                     else
                     {
