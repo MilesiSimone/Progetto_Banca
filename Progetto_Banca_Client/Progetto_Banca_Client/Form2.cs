@@ -116,5 +116,11 @@ namespace Progetto_Banca_Client
         {
             toolTip1.SetToolTip(pictureBox_mostra_password, "Mostra/Nascondi saldo");
         }
+
+        public double saldo_cont()
+        {
+            double saldo = 0;
+            return saldo;
+        }
     }
 }

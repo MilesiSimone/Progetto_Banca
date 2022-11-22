@@ -64,19 +64,19 @@
             // textBox_username
             // 
             this.textBox_username.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_username.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_username.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_username.Location = new System.Drawing.Point(96, 236);
             this.textBox_username.Name = "textBox_username";
-            this.textBox_username.Size = new System.Drawing.Size(224, 22);
+            this.textBox_username.Size = new System.Drawing.Size(224, 26);
             this.textBox_username.TabIndex = 3;
             // 
             // textBox_password
             // 
             this.textBox_password.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_password.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_password.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_password.Location = new System.Drawing.Point(96, 300);
             this.textBox_password.Name = "textBox_password";
-            this.textBox_password.Size = new System.Drawing.Size(224, 22);
+            this.textBox_password.Size = new System.Drawing.Size(224, 26);
             this.textBox_password.TabIndex = 4;
             this.textBox_password.UseSystemPasswordChar = true;
             // 
@@ -88,7 +88,7 @@
             this.label_user.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label_user.Location = new System.Drawing.Point(93, 217);
             this.label_user.Name = "label_user";
-            this.label_user.Size = new System.Drawing.Size(71, 16);
+            this.label_user.Size = new System.Drawing.Size(70, 16);
             this.label_user.TabIndex = 5;
             this.label_user.Text = "Username:";
             // 
@@ -100,7 +100,7 @@
             this.label_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label_password.Location = new System.Drawing.Point(95, 281);
             this.label_password.Name = "label_password";
-            this.label_password.Size = new System.Drawing.Size(69, 16);
+            this.label_password.Size = new System.Drawing.Size(68, 16);
             this.label_password.TabIndex = 6;
             this.label_password.Text = "Password:";
             // 
@@ -198,7 +198,7 @@
             this.linkLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel.Location = new System.Drawing.Point(204, 447);
             this.linkLabel.Name = "linkLabel";
-            this.linkLabel.Size = new System.Drawing.Size(121, 16);
+            this.linkLabel.Size = new System.Drawing.Size(120, 16);
             this.linkLabel.TabIndex = 15;
             this.linkLabel.TabStop = true;
             this.linkLabel.Text = "Richiedi assistenza";
