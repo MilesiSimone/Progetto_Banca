@@ -275,7 +275,7 @@
             this.textBox_importo.Visible = false;
             this.textBox_importo.Click += new System.EventHandler(this.textBox_importo_Click);
             this.textBox_importo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_importo_KeyPress);
-            this.textBox_importo.MouseLeave += new System.EventHandler(this.textBox_importo_MouseLeave);
+            this.textBox_importo.Leave += new System.EventHandler(this.textBox_importo_MouseLeave);
             // 
             // label_causale
             // 

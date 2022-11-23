@@ -173,6 +173,20 @@ namespace Progetto_Banca_Client
                 MessageBox.Show(e.ToString());
             }
         }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            CloseCancel(e);
+        }
+
+        public static void CloseCancel(FormClosingEventArgs e)
+        {
+            const string message = "SEI SICURO DI VOLER CHIUDERE L'APP?";
+            const string caption = "Conferma chiusura";
+            var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            e.Cancel = (result == DialogResult.No);
+        }
     }
 }
 

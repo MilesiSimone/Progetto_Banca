@@ -90,10 +90,7 @@ namespace Progetto_Banca_Client
 
         private void textBox_importo_Click(object sender, EventArgs e)
         {
-            if(textBox_importo.Text == "0,00 €")
-            {
-                textBox_importo.Text = "";
-            }
+           textBox_importo.Text = "";
         }
 
         // Pulsanti Operazioni
@@ -315,13 +312,23 @@ namespace Progetto_Banca_Client
         // Pulsante INVIA bonifico
         private void button_invia_bon_Click(object sender, EventArgs e)
         {
-            if (textBox_causale.Text != "" && textBox_iban.SelectionLength == 27 && textBox_importo.Text != "0,00 €" && textBox_importo.Text != "" && (checkBox_bon_istantaneo.Checked == true || checkBox_bon_ordinario.Checked == true) && (f2.saldo_disp() - importo()) >= 0)
+            DialogResult dr = MessageBox.Show("CLICCA 'SI' PER CONFERMARE L'OPERAZIONE", "Conferma", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+
+            if (dr == DialogResult.Yes)
             {
-                MessageBox.Show("OK");
+                if (textBox_causale.Text != "" && textBox_iban.SelectionLength == 27 && textBox_importo.Text != "0,00 €" && textBox_importo.Text != "" && (checkBox_bon_istantaneo.Checked == true || checkBox_bon_ordinario.Checked == true) && (f2.saldo_disp() - importo()) >= 0)
+                {
+                    MessageBox.Show("OK");
+                }
+                else
+                {
+
+                    MessageBox.Show("OPERAZIONE NON RIUSCITA...     CONTROLLARE I DATI INSERITI.");
+                }
             }
-            else
+            else if (dr == DialogResult.Cancel)
             {
-                MessageBox.Show("OPERAZIONE NON RIUSCITA...     CONTROLLARE I DATI INSERITI.");
+                
             }
         }
 
@@ -340,5 +347,18 @@ namespace Progetto_Banca_Client
             return saldo;
         }
 
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            CloseCancel(e);
+        }
+
+        public static void CloseCancel(FormClosingEventArgs e)
+        {
+            const string message = "SEI SICURO DI VOLER CHIUDERE L'APP?";
+            const string caption = "Conferma chiusura";
+            var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            e.Cancel = (result == DialogResult.No);
+        }
     }
 }
