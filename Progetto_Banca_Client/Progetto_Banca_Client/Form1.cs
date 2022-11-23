@@ -115,7 +115,7 @@ namespace Progetto_Banca_Client
                     sender.Connect(remoteEP);
 
                     // Encode the data string into a byte array.  
-                    byte[] msg = Encoding.ASCII.GetBytes(textBox_username.Text + ';' + textBox_password.Text + "<EOF>");
+                    byte[] msg = Encoding.ASCII.GetBytes("accedi" + ';' + textBox_username.Text + ';' + textBox_password.Text + "<EOF>");
 
                     // Send the data through the socket.  
                     int bytesSent = sender.Send(msg);
@@ -128,13 +128,19 @@ namespace Progetto_Banca_Client
                     nome = s[2] + " " + s[1];
                     if (s[0] == "ok")
                     {
-                        Form2 f2 = new Form2(this);
+                        Form2 f2 = new Form2();
                         f2.Show();
                         this.Hide();
                         f2.label_utente.Text = nome;
                         f2.label_iban.Text = s[3];
                         f2.label_saldo_contabile.Text = s[4] + " €";
                         f2.label_saldo_disponibile.Text = s[5] + " €";
+                        s[6] = s[6].Remove(0, 12);
+                        s[6] = "************" + s[6];
+                        s[7] = s[7].Remove(0, 12);
+                        s[7] = "************" + s[7];
+                        f2.label_num_carta_1.Text = s[6];
+                        f2.label_num_carta_2.Text = s[7];
                     }
                     else
                     {

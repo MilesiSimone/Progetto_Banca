@@ -55,10 +55,10 @@
             this.label_att_1 = new System.Windows.Forms.Label();
             this.label_att_2 = new System.Windows.Forms.Label();
             this.label_num_carta = new System.Windows.Forms.Label();
-            this.textBox_num_carta = new System.Windows.Forms.TextBox();
             this.label_dati_ricarica = new System.Windows.Forms.Label();
             this.button_invia_bon = new Progetto_Banca_Client.button();
             this.button_invia_ricarica = new Progetto_Banca_Client.button();
+            this.comboBox_num_carta = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.panel_logo.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -402,17 +402,6 @@
             this.label_num_carta.Text = "Numero carta";
             this.label_num_carta.Visible = false;
             // 
-            // textBox_num_carta
-            // 
-            this.textBox_num_carta.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_num_carta.Location = new System.Drawing.Point(282, 267);
-            this.textBox_num_carta.MaxLength = 16;
-            this.textBox_num_carta.Name = "textBox_num_carta";
-            this.textBox_num_carta.Size = new System.Drawing.Size(209, 22);
-            this.textBox_num_carta.TabIndex = 22;
-            this.textBox_num_carta.Visible = false;
-            this.textBox_num_carta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_num_carta_KeyPress);
-            // 
             // label_dati_ricarica
             // 
             this.label_dati_ricarica.AutoSize = true;
@@ -459,14 +448,28 @@
             this.button_invia_ricarica.UseVisualStyleBackColor = false;
             this.button_invia_ricarica.Visible = false;
             // 
+            // comboBox_num_carta
+            // 
+            this.comboBox_num_carta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_num_carta.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_num_carta.FormattingEnabled = true;
+            this.comboBox_num_carta.Location = new System.Drawing.Point(283, 267);
+            this.comboBox_num_carta.MaxLength = 16;
+            this.comboBox_num_carta.Name = "comboBox_num_carta";
+            this.comboBox_num_carta.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.comboBox_num_carta.Size = new System.Drawing.Size(208, 24);
+            this.comboBox_num_carta.TabIndex = 25;
+            this.comboBox_num_carta.Visible = false;
+            this.comboBox_num_carta.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(937, 563);
+            this.Controls.Add(this.comboBox_num_carta);
             this.Controls.Add(this.label_dati_ricarica);
-            this.Controls.Add(this.textBox_num_carta);
             this.Controls.Add(this.label_num_carta);
             this.Controls.Add(this.label_att_2);
             this.Controls.Add(this.pictureBox_att);
@@ -533,8 +536,8 @@
         private System.Windows.Forms.Label label_att_1;
         private System.Windows.Forms.Label label_att_2;
         private System.Windows.Forms.Label label_num_carta;
-        private System.Windows.Forms.TextBox textBox_num_carta;
         private System.Windows.Forms.Label label_dati_ricarica;
         private button button_invia_ricarica;
+        public System.Windows.Forms.ComboBox comboBox_num_carta;
     }
 }

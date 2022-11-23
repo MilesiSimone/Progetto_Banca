@@ -17,6 +17,7 @@ namespace Progetto_Banca_Client
     public partial class Form3 : Form
     {
         int s = 0;
+        Form2 f2 = new Form2();
 
         public Form3()
         {
@@ -27,7 +28,7 @@ namespace Progetto_Banca_Client
 
         private void panel_ricarica_carta_Paint(object sender, PaintEventArgs e)
         {
-
+            
         }
 
         private void textBox_num_carta_KeyPress(object sender, KeyPressEventArgs e)
@@ -38,11 +39,13 @@ namespace Progetto_Banca_Client
             }
         }
 
+        // Controllo inserimento IMPORTO
+        
         private void textBox_importo_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
             {
-                if(textBox_importo.Text != "" && (e.KeyChar != ','))
+                if (textBox_importo.Text != "" && (e.KeyChar != ','))
                 {
                     e.Handled = true;
                 }
@@ -51,7 +54,7 @@ namespace Progetto_Banca_Client
                     textBox_importo.Text = "0";
                     e.Handled = true;
                 }
-                
+
             }
             else
             {
@@ -63,7 +66,7 @@ namespace Progetto_Banca_Client
 
                 string result = tb.Text.Substring(0, cursorPosLeft) + e.KeyChar + tb.Text.Substring(cursorPosRight);
 
-                string[] parts = result.Split('.');
+                string[] parts = result.Split(',');
 
                 if (parts.Length > 1)
 
@@ -77,7 +80,7 @@ namespace Progetto_Banca_Client
                     }
 
                     // only allow one decimal point
-                    if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+                    if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf(',') > -1))
                     {
                         e.Handled = true;
                     }
@@ -93,6 +96,7 @@ namespace Progetto_Banca_Client
             }
         }
 
+        // Pulsanti Operazioni
         private void button1_Click(object sender, EventArgs e)
         {
             if (s == 3)
@@ -100,7 +104,7 @@ namespace Progetto_Banca_Client
                 button3.ForeColor = Color.Black;
                 label_dati_ricarica.Visible = false;
                 label_num_carta.Visible = false;
-                textBox_num_carta.Visible = false;
+                comboBox_num_carta.Visible = false;
                 label_importo.Visible = false;
                 textBox_importo.Visible = false;
                 button_invia_ricarica.Visible = false;
@@ -132,6 +136,7 @@ namespace Progetto_Banca_Client
            
         }
 
+        // Pulsanti Operazioni
         private void button3_Click(object sender, EventArgs e)
         {
             if (s == 1)
@@ -163,12 +168,13 @@ namespace Progetto_Banca_Client
             button3.ForeColor = Color.Green;
             label_dati_ricarica.Visible = true;
             label_num_carta.Visible = true;
-            textBox_num_carta.Visible = true;
+            comboBox_num_carta.Visible = true;
             label_importo.Visible = true;
             textBox_importo.Visible = true;
             button_invia_ricarica.Visible = true;
         }
 
+        // Controllo inserimento IBAN
         private void textBox_iban_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && e.KeyChar < 65 || e.KeyChar > 122)
@@ -177,6 +183,7 @@ namespace Progetto_Banca_Client
             }
         }
 
+        // Pulsanti Operazioni
         private void button2_Click(object sender, EventArgs e)
         {
             if (s == 1)
@@ -201,7 +208,7 @@ namespace Progetto_Banca_Client
                 button3.ForeColor = Color.Black;
                 label_dati_ricarica.Visible = false;
                 label_num_carta.Visible = false;
-                textBox_num_carta.Visible = false;
+                comboBox_num_carta.Visible = false;
                 label_importo.Visible = false;
                 textBox_importo.Visible = false;
                 button_invia_ricarica.Visible = false;
@@ -220,6 +227,7 @@ namespace Progetto_Banca_Client
             label_att_2.Visible = true;
         }
 
+        // Pulsanti Operazioni
         private void button4_Click(object sender, EventArgs e)
         {
             if (s == 1)
@@ -244,7 +252,7 @@ namespace Progetto_Banca_Client
                 button3.ForeColor = Color.Black;
                 label_dati_ricarica.Visible = false;
                 label_num_carta.Visible = false;
-                textBox_num_carta.Visible = false;
+                comboBox_num_carta.Visible = false;
                 label_importo.Visible = false;
                 textBox_importo.Visible = false;
                 button_invia_ricarica.Visible = false;
@@ -263,6 +271,7 @@ namespace Progetto_Banca_Client
             label_att_2.Visible = true;
         }
 
+        // Controllo inserimento IMPORTO
         private void textBox_importo_MouseLeave(object sender, EventArgs e)
         {
             if (textBox_importo.Text != "")
@@ -275,6 +284,7 @@ namespace Progetto_Banca_Client
             }
         }
 
+        // Controllo inserimento tipo bonifico
         private void checkBox_bon_istantaneo_Click(object sender, EventArgs e)
         {
             if (checkBox_bon_ordinario.Checked == true)
@@ -288,6 +298,7 @@ namespace Progetto_Banca_Client
             }
         }
 
+        // Controllo inserimento tipo bonifico
         private void checkBox_bon_ordinario_Click(object sender, EventArgs e)
         {
             if (checkBox_bon_istantaneo.Checked == true)
@@ -301,9 +312,33 @@ namespace Progetto_Banca_Client
             }
         }
 
+        // Pulsante INVIA bonifico
         private void button_invia_bon_Click(object sender, EventArgs e)
+        {
+            if (textBox_causale.Text != "" && textBox_iban.SelectionLength == 27 && textBox_importo.Text != "0,00 €" && textBox_importo.Text != "" && (checkBox_bon_istantaneo.Checked == true || checkBox_bon_ordinario.Checked == true) && (f2.saldo_disp() - importo()) >= 0)
+            {
+                MessageBox.Show("OK");
+            }
+            else
+            {
+                MessageBox.Show("OPERAZIONE NON RIUSCITA...     CONTROLLARE I DATI INSERITI.");
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
+
+        // Conversione importo da string a double
+        public double importo()
+        {
+            double saldo = 0;
+            string string_saldo = textBox_importo.Text;
+            string_saldo = string_saldo.Substring(0, string_saldo.Length - 2);
+            saldo = Convert.ToDouble(string_saldo);
+            return saldo;
+        }
+
     }
 }

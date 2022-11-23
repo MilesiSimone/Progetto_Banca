@@ -54,28 +54,30 @@ public class SynchronousSocketListener
                     }
                 }
                 string[] credenziali = data.Split(';');
-                string[] lines = File.ReadAllLines("clienti.txt");
-                string[] info = new string[9];
-                string controllo = "no";
-                foreach (string line in lines)
+                if (credenziali[0] == "accedi")
                 {
-                    info = line.Split(';');
-                    if (credenziali[0] == info[0] && credenziali[1] == (info[1] + "<EOF>"))
+                    string[] lines = File.ReadAllLines("clienti.txt");
+                    string[] info = new string[9];
+                    string controllo = "no";
+                    foreach (string line in lines)
                     {
-                        controllo = "ok";
-                        Console.WriteLine("Accesso effettuato.");
-                        Console.WriteLine("Utente: " + credenziali[0]);
-                        break;
+                        info = line.Split(';');
+                        if (credenziali[1] == info[0] && credenziali[2] == (info[1] + "<EOF>"))
+                        {
+                            controllo = "ok";
+                            Console.WriteLine("Accesso effettuato.");
+                            Console.WriteLine("Utente: " + credenziali[1]);
+                            break;
+                        }
                     }
-                }
 
-                controllo = controllo + ";" + info[2] + ";" + info[3] + ";" + info[4] + ";" + info[5] + ";" + info[6] + ";" + info[7] + ";" + info[8];
-                // Echo the data back to the client.  
-                byte[] msg = Encoding.ASCII.GetBytes(controllo);
-                Console.WriteLine(controllo);
-                handler.Send(msg);
-                handler.Shutdown(SocketShutdown.Both);
-                handler.Close();
+                    controllo = controllo + ";" + info[2] + ";" + info[3] + ";" + info[4] + ";" + info[5] + ";" + info[6] + ";" + info[7] + ";" + info[8];
+                    // Echo the data back to the client.  
+                    byte[] msg = Encoding.ASCII.GetBytes(controllo);
+                    handler.Send(msg);
+                    handler.Shutdown(SocketShutdown.Both);
+                    handler.Close();
+                }
             }
 
         }

@@ -13,31 +13,15 @@ namespace Progetto_Banca_Client
 {
     public partial class Form2 : Form
     {
-        public Form2(Form1 f1)
+        public Form2()
         {
             InitializeComponent();
             CheckForIllegalCrossThreadCalls = false;
-            label_utente.Text = f1.textBox_username.Text;
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label_iban_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label_icona_euro_Click(object sender, EventArgs e)
-        {
-
+            
         }
 
         private void label6_MouseHover(object sender, EventArgs e)
@@ -86,12 +70,16 @@ namespace Progetto_Banca_Client
             {
                 pictureBox2.Visible = true;
                 pictureBox3.Visible = true;
+                label_num_carta_1.Visible = true;
+                label_num_carta_2.Visible = true;
                 label7.Text = "Nascondi carte";
             }
             else
             {
                 pictureBox2.Visible = false;
                 pictureBox3.Visible = false;
+                label_num_carta_1.Visible = false;
+                label_num_carta_2.Visible = false;
                 label7.Text = "Visualizza carte";
             }
         }
@@ -105,21 +93,39 @@ namespace Progetto_Banca_Client
         {
             Form3 f3 = new Form3();
             f3.Show();
+            f3.comboBox_num_carta.Items.Add(label_num_carta_1.Text);
+            f3.comboBox_num_carta.Items.Add(label_num_carta_2.Text);
         }
 
+        // Mostra/Nascondi assistenza
         private void pictureBox1_MouseHover(object sender, EventArgs e)
         {
             toolTip.SetToolTip(pictureBox1, "Assistenza");
         }
 
+        // Mostra/Nascondi password
         private void pictureBox_mostra_password_MouseHover(object sender, EventArgs e)
         {
             toolTip1.SetToolTip(pictureBox_mostra_password, "Mostra/Nascondi saldo");
         }
 
+        // Conversione saldo da string a double
         public double saldo_cont()
         {
             double saldo = 0;
+            string string_saldo = label_saldo_contabile.Text;
+            string_saldo = string_saldo.Substring(0, string_saldo.Length - 2);
+            saldo = Convert.ToDouble(string_saldo);
+            return saldo;
+        }
+
+        // Conversione saldo da string a double
+        public double saldo_disp()
+        {
+            double saldo = 0;
+            string string_saldo = label_saldo_disponibile.Text;
+            string_saldo = string_saldo.Substring(0, string_saldo.Length - 2);
+            saldo = Convert.ToDouble(string_saldo);
             return saldo;
         }
     }
