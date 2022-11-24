@@ -13,6 +13,8 @@ namespace Progetto_Banca_Client
 {
     public partial class Form2 : Form
     {
+        Form1 f1 = new Form1();
+        
         public Form2()
         {
             InitializeComponent();
@@ -91,7 +93,7 @@ namespace Progetto_Banca_Client
 
         private void button_operazioni_Click(object sender, EventArgs e)
         {
-            Form3 f3 = new Form3();
+            Form3 f3 = new Form3(this);
             f3.Show();
             f3.comboBox_num_carta.Items.Add(label_num_carta_1.Text);
             f3.comboBox_num_carta.Items.Add(label_num_carta_2.Text);
@@ -134,7 +136,7 @@ namespace Progetto_Banca_Client
             CloseCancel(e);
         }
 
-        public static void CloseCancel(FormClosingEventArgs e)
+        public void CloseCancel(FormClosingEventArgs e)
         {
             const string message = "SEI SICURO DI VOLER CHIUDERE L'APP?";
             const string caption = "Conferma chiusura";

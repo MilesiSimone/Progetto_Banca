@@ -21,7 +21,7 @@ namespace Progetto_Banca_Client
         {
             InitializeComponent();
             DateTime thisDay = DateTime.Today;
-            label_date.Text = thisDay.ToString("D");
+            label_date.Text = thisDay.ToString("dd/MM/yyyy");
             CheckForIllegalCrossThreadCalls = false;
         }
 

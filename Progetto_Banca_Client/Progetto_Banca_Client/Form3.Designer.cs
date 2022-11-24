@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.panel2 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
@@ -56,9 +57,10 @@
             this.label_att_2 = new System.Windows.Forms.Label();
             this.label_num_carta = new System.Windows.Forms.Label();
             this.label_dati_ricarica = new System.Windows.Forms.Label();
+            this.comboBox_num_carta = new System.Windows.Forms.ComboBox();
+            this.timer_bon_ord = new System.Windows.Forms.Timer(this.components);
             this.button_invia_bon = new Progetto_Banca_Client.button();
             this.button_invia_ricarica = new Progetto_Banca_Client.button();
-            this.comboBox_num_carta = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.panel_logo.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -236,6 +238,7 @@
             this.textBox_iban.Location = new System.Drawing.Point(282, 178);
             this.textBox_iban.MaxLength = 27;
             this.textBox_iban.Name = "textBox_iban";
+            this.textBox_iban.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.textBox_iban.Size = new System.Drawing.Size(209, 22);
             this.textBox_iban.TabIndex = 4;
             this.textBox_iban.Visible = false;
@@ -293,6 +296,7 @@
             this.textBox_causale.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_causale.Location = new System.Drawing.Point(282, 382);
             this.textBox_causale.Name = "textBox_causale";
+            this.textBox_causale.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBox_causale.Size = new System.Drawing.Size(209, 22);
             this.textBox_causale.TabIndex = 9;
             this.textBox_causale.Visible = false;
@@ -413,6 +417,26 @@
             this.label_dati_ricarica.Text = "Dati operazione";
             this.label_dati_ricarica.Visible = false;
             // 
+            // comboBox_num_carta
+            // 
+            this.comboBox_num_carta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_num_carta.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_num_carta.FormattingEnabled = true;
+            this.comboBox_num_carta.Location = new System.Drawing.Point(283, 267);
+            this.comboBox_num_carta.MaxLength = 16;
+            this.comboBox_num_carta.Name = "comboBox_num_carta";
+            this.comboBox_num_carta.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.comboBox_num_carta.Size = new System.Drawing.Size(208, 24);
+            this.comboBox_num_carta.TabIndex = 25;
+            this.comboBox_num_carta.Visible = false;
+            this.comboBox_num_carta.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // timer_bon_ord
+            // 
+            this.timer_bon_ord.Enabled = true;
+            this.timer_bon_ord.Interval = 10000;
+            this.timer_bon_ord.Tick += new System.EventHandler(this.timer_bon_ord_Tick);
+            // 
             // button_invia_bon
             // 
             this.button_invia_bon.BackColor = System.Drawing.Color.Green;
@@ -447,20 +471,6 @@
             this.button_invia_ricarica.Text = "INVIA";
             this.button_invia_ricarica.UseVisualStyleBackColor = false;
             this.button_invia_ricarica.Visible = false;
-            // 
-            // comboBox_num_carta
-            // 
-            this.comboBox_num_carta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_num_carta.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox_num_carta.FormattingEnabled = true;
-            this.comboBox_num_carta.Location = new System.Drawing.Point(283, 267);
-            this.comboBox_num_carta.MaxLength = 16;
-            this.comboBox_num_carta.Name = "comboBox_num_carta";
-            this.comboBox_num_carta.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboBox_num_carta.Size = new System.Drawing.Size(208, 24);
-            this.comboBox_num_carta.TabIndex = 25;
-            this.comboBox_num_carta.Visible = false;
-            this.comboBox_num_carta.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Form3
             // 
@@ -539,5 +549,6 @@
         private System.Windows.Forms.Label label_dati_ricarica;
         private button button_invia_ricarica;
         public System.Windows.Forms.ComboBox comboBox_num_carta;
+        public System.Windows.Forms.Timer timer_bon_ord;
     }
 }
