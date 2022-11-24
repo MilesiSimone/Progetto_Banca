@@ -96,7 +96,6 @@ namespace Progetto_Banca_Client
         {
             // Data buffer for incoming data.  
             byte[] bytes_ok = new byte[1024];
-            byte[] bytes_info = new byte[5000];
 
             // Connect to a remote device.  
             try

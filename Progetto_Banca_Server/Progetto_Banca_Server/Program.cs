@@ -37,8 +37,8 @@ public class SynchronousSocketListener
             // Start listening for connections.  
             while (true)
             {
-               
-                Console.WriteLine("Waiting for a connection...");
+
+                Console.WriteLine("\n\nWaiting for a connection...\n");
                 // Program is suspended while waiting for an incoming connection.  
                 Socket handler = listener.Accept();
                 data = null;
@@ -53,30 +53,37 @@ public class SynchronousSocketListener
                         break;
                     }
                 }
-                string[] credenziali = data.Split(';');
-                if (credenziali[0] == "accedi")
+                string[] messaggio_client = data.Split(';');
+                switch (messaggio_client[0])
                 {
-                    string[] lines = File.ReadAllLines("clienti.txt");
-                    string[] info = new string[9];
-                    string controllo = "no";
-                    foreach (string line in lines)
-                    {
-                        info = line.Split(';');
-                        if (credenziali[1] == info[0] && credenziali[2] == (info[1] + "<EOF>"))
-                        {
-                            controllo = "ok";
-                            Console.WriteLine("Accesso effettuato.");
-                            Console.WriteLine("Utente: " + credenziali[1]);
-                            break;
-                        }
-                    }
 
-                    controllo = controllo + ";" + info[2] + ";" + info[3] + ";" + info[4] + ";" + info[5] + ";" + info[6] + ";" + info[7] + ";" + info[8];
-                    // Echo the data back to the client.  
-                    byte[] msg = Encoding.ASCII.GetBytes(controllo);
-                    handler.Send(msg);
-                    handler.Shutdown(SocketShutdown.Both);
-                    handler.Close();
+                    case "accedi":
+                        string[] lines = File.ReadAllLines("clienti.txt");
+                        string[] info = new string[9];
+                        string controllo = "no";
+                        foreach (string line in lines)
+                        {
+                            info = line.Split(';');
+                            if (messaggio_client[1] == info[0] && messaggio_client[2] == (info[1] + "<EOF>"))
+                            {
+                                controllo = "ok";
+                                Console.WriteLine("Accesso effettuato.");
+                                Console.WriteLine("Utente: " + messaggio_client[1]);
+                                break;
+                            }
+                        }
+
+                        controllo = controllo + ";" + info[2] + ";" + info[3] + ";" + info[4] + ";" + info[5] + ";" + info[6] + ";" + info[7] + ";" + info[8];
+                        // Echo the data back to the client.  
+                        byte[] msg = Encoding.ASCII.GetBytes(controllo);
+                        handler.Send(msg);
+                        handler.Shutdown(SocketShutdown.Both);
+                        handler.Close();
+                        break;
+
+                    case "bonifico":
+                        Console.WriteLine(data);
+                        break;
                 }
             }
 

@@ -353,7 +353,7 @@ namespace Progetto_Banca_Client
                                     socket.Connect(remoteEP);
 
                                     // Encode the data string into a byte array.  
-                                    byte[] msg = Encoding.ASCII.GetBytes("bonifico" + ';' + "<EOF>");
+                                    byte[] msg = Encoding.ASCII.GetBytes("bonifico" + ';' + f.label_iban.Text + ';' + textBox_iban.Text + ';' + textBox_importo.Text + ';' + textBox_causale.Text + ';' + checkBox_det_fisc.Checked + ';' + checkBox_bon_ordinario.Checked + ';' + checkBox_bon_istantaneo.Checked + "<EOF>");
 
                                     // Send the data through the socket.  
                                     int bytesSent = socket.Send(msg);
