@@ -331,7 +331,6 @@ namespace Progetto_Banca_Client
                             f.label_saldo_contabile.Text = new_saldo.ToString() + " €";
                             f.label_saldo_disponibile.Text = new_saldo.ToString() + " €";
                             f.Refresh();
-                            MessageBox.Show("OPERAZIONE ESEGUITA CON SUCCESSO");
 
                             // Data buffer for incoming data.  
                             byte[] bytes_ok = new byte[1024];
@@ -387,6 +386,7 @@ namespace Progetto_Banca_Client
                             {
                                 MessageBox.Show(ai.ToString());
                             }
+                            MessageBox.Show("OPERAZIONE ESEGUITA CON SUCCESSO");
                         }
                         else
                         {
