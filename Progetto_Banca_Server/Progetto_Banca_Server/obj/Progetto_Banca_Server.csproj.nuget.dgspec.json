@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\UTENTE\\Source\\Repos\\MilesiSimone\\Progetto_Banca\\Progetto_Banca_Server\\Progetto_Banca_Server\\Progetto_Banca_Server.csproj": {}
+    "C:\\Users\\UTENTE\\source\\repos\\MilesiSimone\\Progetto_Banca\\Progetto_Banca_Server\\Progetto_Banca_Server\\Progetto_Banca_Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\UTENTE\\Source\\Repos\\MilesiSimone\\Progetto_Banca\\Progetto_Banca_Server\\Progetto_Banca_Server\\Progetto_Banca_Server.csproj": {
+    "C:\\Users\\UTENTE\\source\\repos\\MilesiSimone\\Progetto_Banca\\Progetto_Banca_Server\\Progetto_Banca_Server\\Progetto_Banca_Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\UTENTE\\Source\\Repos\\MilesiSimone\\Progetto_Banca\\Progetto_Banca_Server\\Progetto_Banca_Server\\Progetto_Banca_Server.csproj",
+        "projectUniqueName": "C:\\Users\\UTENTE\\source\\repos\\MilesiSimone\\Progetto_Banca\\Progetto_Banca_Server\\Progetto_Banca_Server\\Progetto_Banca_Server.csproj",
         "projectName": "Progetto_Banca_Server",
-        "projectPath": "C:\\Users\\UTENTE\\Source\\Repos\\MilesiSimone\\Progetto_Banca\\Progetto_Banca_Server\\Progetto_Banca_Server\\Progetto_Banca_Server.csproj",
+        "projectPath": "C:\\Users\\UTENTE\\source\\repos\\MilesiSimone\\Progetto_Banca\\Progetto_Banca_Server\\Progetto_Banca_Server\\Progetto_Banca_Server.csproj",
         "packagesPath": "C:\\Users\\UTENTE\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\UTENTE\\Source\\Repos\\MilesiSimone\\Progetto_Banca\\Progetto_Banca_Server\\Progetto_Banca_Server\\obj\\",
+        "outputPath": "C:\\Users\\UTENTE\\source\\repos\\MilesiSimone\\Progetto_Banca\\Progetto_Banca_Server\\Progetto_Banca_Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

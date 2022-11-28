@@ -323,6 +323,10 @@ namespace Progetto_Banca_Client
                {
                   if(checkBox_bon_istantaneo.Checked == true)
                   {
+                        DateTime thisDay = DateTime.Today;
+                        string date = thisDay.ToString("dd/MM/yyyy");
+                        //var src = DateTime.Now;
+                        //var hour = new DateTime(src.Hour, src.Minute, 0);
                         double new_saldo = f.saldo_disp() - importo();
                         string new_saldo_string = new_saldo.ToString();
                         char lastCharacter = new_saldo_string[new_saldo_string.Length - 1];

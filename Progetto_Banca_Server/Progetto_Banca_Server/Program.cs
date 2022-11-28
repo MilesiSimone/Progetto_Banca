@@ -60,6 +60,7 @@ public class SynchronousSocketListener
                 {
 
                     case "accedi":
+
                         string[] lines = File.ReadAllLines("clienti.txt");
                         string[] info = new string[9];
                         string controllo = "no";
@@ -84,6 +85,8 @@ public class SynchronousSocketListener
                         break;
 
                     case "bonifico":
+
+                        Console.WriteLine("BONIFICO:\n");
                         Console.WriteLine("Iban utente:");
                         Console.WriteLine(messaggio_client[1]);
                         Console.WriteLine("Iban beneficiario:");
@@ -92,29 +95,35 @@ public class SynchronousSocketListener
                         Console.WriteLine(messaggio_client[3]);
                         Console.WriteLine("Casuale:");
                         Console.WriteLine(messaggio_client[5]);
-                        lines = File.ReadAllLines("clienti.txt");
-                        info = new string[9];
-                        using (StreamWriter sw = new StreamWriter("clienti.txt"))
-                        {
-                            foreach (string line in lines)
-                            {
-                                info = line.Split(';');
-                                if (messaggio_client[1] == info[4])
-                                {
-                                    //sw.WriteLine(info[0] + ';' + info[1] + ';' + info[2] + ';' + info[3] + ';' + info[4] + ';' + messaggio_client[4] + ';' + messaggio_client[4] + ';' + info[7] + ';' + info[8]);
-                                    break;
-                                }
-                            }
-                        }
+
+                        //lines = File.ReadAllLines("clienti.txt");
+                        //info = new string[9];
+                        //using (StreamWriter sw = new StreamWriter("clienti.txt"))
+                        //{
+                        //    foreach (string line in lines)
+                        //    {
+                        //        info = line.Split(';');
+                        //        if (messaggio_client[1] == info[4])
+                        //        {
+                        //            //sw.WriteLine(info[0] + ';' + info[1] + ';' + info[2] + ';' + info[3] + ';' + info[4] + ';' + messaggio_client[4] + ';' + messaggio_client[4] + ';' + info[7] + ';' + info[8]);
+                        //            break;
+                        //        }
+                        //    }
+                        //}
+
                         string folderName = messaggio_client[1];
-                        string pathString = Path.Combine(folderName, "C:\\Users\\UTENTE\\source\repos\\MilesiSimone\\Progetto_Banca\\Progetto_Banca_Server\\Progetto_Banca_Server\\bin\\Debug\\net6.0\\bonifici");
-                        if (!Directory.Exists(pathString))
+                        //string pathString = Path.Combine(folderName, "bonifici");
+                        string[] paths = new string[] { @"\\bonifici\\", folderName };
+                        string fullPath = Path.Combine(paths);
+                        Console.WriteLine(fullPath);
+                        if (!Directory.Exists(fullPath))
                         {
-                            Directory.CreateDirectory(pathString);
-                            using (FileStream fs = File.Create(pathString))
-                            {
-                                //File.AppendAllLines(pathString, messaggio_client[2]);
-                            }
+                            //Directory.CreateDirectory(fullPath);
+                            File.Create(@"\\bonifici\\ciao.txt");
+                            //using (FileStream fs = File.Create(pathString))
+                            //{
+                            //    //File.AppendAllLines(pathString, messaggio_client[2]);
+                            //}
                         }
                         break;
                 }
