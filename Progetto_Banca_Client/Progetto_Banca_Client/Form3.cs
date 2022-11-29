@@ -321,75 +321,77 @@ namespace Progetto_Banca_Client
            {
                if (textBox_causale.Text != "" && textBox_iban.Text.Length == 27 && textBox_importo.Text != "0,00 €" && textBox_importo.Text != "" && (checkBox_bon_istantaneo.Checked == true || checkBox_bon_ordinario.Checked == true) && (f.saldo_disp() - importo()) >= 0)
                {
-                  if(checkBox_bon_istantaneo.Checked == true)
-                  {
-                        DateTime thisDay = DateTime.Today;
-                        string date = thisDay.ToString("dd/MM/yyyy");
-                        //var src = DateTime.Now;
-                        //var hour = new DateTime(src.Hour, src.Minute, 0);
-                        double new_saldo = f.saldo_disp() - importo();
-                        string new_saldo_string = new_saldo.ToString();
+
+                    DateTime thisDay = DateTime.Today;
+                    string date = thisDay.ToString("dd/MM/yyyy");
+                    string hour = DateTime.Now.ToString("HH:mm");
+                    double new_saldo = f.saldo_disp() - importo();
+                    string new_saldo_string = new_saldo.ToString();
+
+                    // Data buffer for incoming data.  
+                    byte[] bytes_ok = new byte[1024];
+
+                    // Connect to a remote device.  
+                    try
+                    {
+                        // Establish the remote endpoint for the socket.  
+                        // This example uses port 11000 on the local computer.  
+                        IPAddress ipAddress = System.Net.IPAddress.Parse("127.0.0.1");
+                        IPEndPoint remoteEP = new IPEndPoint(ipAddress, 5000);
+
+                        // Create a TCP/IP  socket.  
+                        Socket socket = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
+
+                        // Connect the socket to the remote endpoint. Catch any errors.  
+                        try
+                        {
+                            socket.Connect(remoteEP);
+
+                            // Encode the data string into a byte array.  
+                            byte[] msg = Encoding.ASCII.GetBytes("bonifico" + ';' + f.label_iban.Text + ';' + textBox_iban.Text + ';' + textBox_importo.Text + ';' + new_saldo_string + ';' + textBox_causale.Text + ';' + checkBox_det_fisc.Checked + ';' + checkBox_bon_ordinario.Checked + ';' + checkBox_bon_istantaneo.Checked + ';' + label_date.Text + ';' + hour + "<EOF>");
+
+                            // Send the data through the socket.  
+                            int bytesSent = socket.Send(msg);
+
+                            // Receive the response from the remote device.  
+                            //int bytesRec = socket.Receive(bytes_ok);
+
+                            //string msg_server = Encoding.ASCII.GetString(bytes_ok, 0, bytesRec);
+
+
+                            // Release the socket.  
+                            socket.Shutdown(SocketShutdown.Both);
+                            socket.Close();
+
+                        }
+                        catch (ArgumentNullException ane)
+                        {
+                            MessageBox.Show("ArgumentNullException : {0}", ane.ToString());
+                        }
+                        catch (SocketException se)
+                        {
+                            MessageBox.Show("SocketException : {0}", se.ToString());
+                        }
+                        catch (Exception i)
+                        {
+                            MessageBox.Show("Unexpected exception : {0}", i.ToString());
+                        }
+
+                    }
+                    catch (Exception ai)
+                    {
+                        MessageBox.Show(ai.ToString());
+                    }
+
+                    if (checkBox_bon_istantaneo.Checked == true)
+                    {
+                        
                         char lastCharacter = new_saldo_string[new_saldo_string.Length - 1];
                         if (lastCharacter != '0')
                         {
                             f.label_saldo_contabile.Text = new_saldo.ToString() + " €";
                             f.label_saldo_disponibile.Text = new_saldo.ToString() + " €";
                             f.Refresh();
-
-                            // Data buffer for incoming data.  
-                            byte[] bytes_ok = new byte[1024];
-
-                            // Connect to a remote device.  
-                            try
-                            {
-                                // Establish the remote endpoint for the socket.  
-                                // This example uses port 11000 on the local computer.  
-                                IPAddress ipAddress = System.Net.IPAddress.Parse("127.0.0.1");
-                                IPEndPoint remoteEP = new IPEndPoint(ipAddress, 5000);
-
-                                // Create a TCP/IP  socket.  
-                                Socket socket = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
-
-                                // Connect the socket to the remote endpoint. Catch any errors.  
-                                try
-                                {
-                                    socket.Connect(remoteEP);
-
-                                    // Encode the data string into a byte array.  
-                                    byte[] msg = Encoding.ASCII.GetBytes("bonifico" + ';' + f.label_iban.Text + ';' + textBox_iban.Text + ';' + textBox_importo.Text + ';' + new_saldo_string + ';' + textBox_causale.Text + ';' + checkBox_det_fisc.Checked + ';' + checkBox_bon_ordinario.Checked + ';' + checkBox_bon_istantaneo.Checked + "<EOF>");
-
-                                    // Send the data through the socket.  
-                                    int bytesSent = socket.Send(msg);
-
-                                    // Receive the response from the remote device.  
-                                    //int bytesRec = socket.Receive(bytes_ok);
-
-                                    //string msg_server = Encoding.ASCII.GetString(bytes_ok, 0, bytesRec);
-
-
-                                    // Release the socket.  
-                                    socket.Shutdown(SocketShutdown.Both);
-                                    socket.Close();
-
-                                }
-                                catch (ArgumentNullException ane)
-                                {
-                                    MessageBox.Show("ArgumentNullException : {0}", ane.ToString());
-                                }
-                                catch (SocketException se)
-                                {
-                                    MessageBox.Show("SocketException : {0}", se.ToString());
-                                }
-                                catch (Exception i)
-                                {
-                                    MessageBox.Show("Unexpected exception : {0}", i.ToString());
-                                }
-
-                            }
-                            catch (Exception ai)
-                            {
-                                MessageBox.Show(ai.ToString());
-                            }
                             MessageBox.Show("OPERAZIONE ESEGUITA CON SUCCESSO");
                         }
                         else
@@ -402,10 +404,7 @@ namespace Progetto_Banca_Client
                   }
                   else if(checkBox_bon_ordinario.Checked == true)
                   {
-                        //timer_bon_ord.Interval("1000");
                         timer_bon_ord.Start();
-                        double new_saldo = f.saldo_disp() - importo();
-                        string new_saldo_string = new_saldo.ToString();
                         char lastCharacter = new_saldo_string[new_saldo_string.Length - 1];
                         if (lastCharacter != '0')
                         {
@@ -419,7 +418,7 @@ namespace Progetto_Banca_Client
                             f.Refresh();
                             MessageBox.Show("OPERAZIONE ESEGUITA CON SUCCESSO");
                         }
-                    }
+                  }
                }
                else
                {
@@ -472,6 +471,11 @@ namespace Progetto_Banca_Client
             f.label_saldo_contabile.Text = f.label_saldo_disponibile.Text;
             f.Refresh();
             timer_bon_ord.Stop();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

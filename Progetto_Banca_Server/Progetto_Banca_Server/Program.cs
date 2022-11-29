@@ -55,6 +55,7 @@ public class SynchronousSocketListener
                         break;
                     }
                 }
+               
                 string[] messaggio_client = data.Split(';');
                 switch (messaggio_client[0])
                 {
@@ -92,10 +93,14 @@ public class SynchronousSocketListener
                         Console.WriteLine("Iban beneficiario:");
                         Console.WriteLine(messaggio_client[2]);
                         Console.WriteLine("Importo:");
+                        messaggio_client[3] = messaggio_client[3].Substring(0, messaggio_client[3].Length - 2);
                         Console.WriteLine(messaggio_client[3]);
-                        Console.WriteLine("Casuale:");
+                        Console.WriteLine("Causale:");
                         Console.WriteLine(messaggio_client[5]);
-
+                        Console.WriteLine("Data e ora:");
+                        Console.WriteLine(messaggio_client[9]);
+                        messaggio_client[10] = messaggio_client[10].Substring(0, messaggio_client[10].Length - 5);
+                        Console.WriteLine(messaggio_client[10]);
                         //lines = File.ReadAllLines("clienti.txt");
                         //info = new string[9];
                         //using (StreamWriter sw = new StreamWriter("clienti.txt"))
@@ -111,20 +116,20 @@ public class SynchronousSocketListener
                         //    }
                         //}
 
-                        string folderName = messaggio_client[1];
-                        //string pathString = Path.Combine(folderName, "bonifici");
-                        string[] paths = new string[] { @"\\bonifici\\", folderName };
-                        string fullPath = Path.Combine(paths);
-                        Console.WriteLine(fullPath);
-                        if (!Directory.Exists(fullPath))
-                        {
-                            //Directory.CreateDirectory(fullPath);
-                            File.Create(@"\\bonifici\\ciao.txt");
-                            //using (FileStream fs = File.Create(pathString))
-                            //{
-                            //    //File.AppendAllLines(pathString, messaggio_client[2]);
-                            //}
-                        }
+                        //string folderName = messaggio_client[1];
+                        ////string pathString = Path.Combine(folderName, "bonifici");
+                        //string[] paths = new string[] { "C: \\Users\\UTENTE\\source\repos\\MilesiSimone\\Progetto_Banca\\Progetto_Banca_Server\\Progetto_Banca_Server\\bin\\Debug\\net6.0\\bonifici\\", folderName };
+                        //string fullPath = Path.Combine(paths);
+                        //Console.WriteLine(fullPath);
+                        //if (!Directory.Exists("bonifici"))
+                        //{
+                        //    //Directory.CreateDirectory(fullPath);
+                        //    Directory.CreateDirectory("bonifici");
+                        //    //using (FileStream fs = File.Create(pathString))
+                        //    //{
+                        //    //    //File.AppendAllLines(pathString, messaggio_client[2]);
+                        //    //}
+                        //}
                         break;
                 }
             }
