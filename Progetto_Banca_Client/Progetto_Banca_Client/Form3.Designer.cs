@@ -172,7 +172,7 @@
             this.label_date.AutoSize = true;
             this.label_date.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_date.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label_date.Location = new System.Drawing.Point(12, 539);
+            this.label_date.Location = new System.Drawing.Point(50, 539);
             this.label_date.Name = "label_date";
             this.label_date.Size = new System.Drawing.Size(65, 15);
             this.label_date.TabIndex = 9;
@@ -471,6 +471,7 @@
             this.button_invia_ricarica.Text = "INVIA";
             this.button_invia_ricarica.UseVisualStyleBackColor = false;
             this.button_invia_ricarica.Visible = false;
+            this.button_invia_ricarica.Click += new System.EventHandler(this.button_invia_ricarica_Click);
             // 
             // Form3
             // 

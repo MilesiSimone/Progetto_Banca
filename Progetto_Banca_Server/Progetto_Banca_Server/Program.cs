@@ -101,6 +101,7 @@ public class SynchronousSocketListener
                         Console.WriteLine(messaggio_client[9]);
                         messaggio_client[10] = messaggio_client[10].Substring(0, messaggio_client[10].Length - 5);
                         Console.WriteLine(messaggio_client[10]);
+
                         //lines = File.ReadAllLines("clienti.txt");
                         //info = new string[9];
                         //using (StreamWriter sw = new StreamWriter("clienti.txt"))
@@ -116,20 +117,28 @@ public class SynchronousSocketListener
                         //    }
                         //}
 
-                        //string folderName = messaggio_client[1];
-                        ////string pathString = Path.Combine(folderName, "bonifici");
-                        //string[] paths = new string[] { "C: \\Users\\UTENTE\\source\repos\\MilesiSimone\\Progetto_Banca\\Progetto_Banca_Server\\Progetto_Banca_Server\\bin\\Debug\\net6.0\\bonifici\\", folderName };
-                        //string fullPath = Path.Combine(paths);
-                        //Console.WriteLine(fullPath);
-                        //if (!Directory.Exists("bonifici"))
-                        //{
-                        //    //Directory.CreateDirectory(fullPath);
-                        //    Directory.CreateDirectory("bonifici");
-                        //    //using (FileStream fs = File.Create(pathString))
-                        //    //{
-                        //    //    //File.AppendAllLines(pathString, messaggio_client[2]);
-                        //    //}
-                        //}
+                        string path = "BONIFICI/" + messaggio_client[1] + ".txt";
+                        string lineappend = messaggio_client[9] + ';' + messaggio_client[10] + ';' + messaggio_client[2] + ';' + messaggio_client[3] + ';' + messaggio_client[4] + ';' + messaggio_client[5] + ';' + messaggio_client[6] + ';' + messaggio_client[7] + ';' + messaggio_client[8] + "\n";
+                        File.AppendAllText(path, lineappend);
+                        break;
+                    case "ricarica":
+
+                        Console.WriteLine("RICARICA:\n");
+                        Console.WriteLine("Iban utente:");
+                        Console.WriteLine(messaggio_client[1]);
+                        Console.WriteLine("Numero carta:");
+                        Console.WriteLine(messaggio_client[3]);
+                        Console.WriteLine("Importo:");
+                        messaggio_client[2] = messaggio_client[2].Substring(0, messaggio_client[2].Length - 2);
+                        Console.WriteLine(messaggio_client[2]);
+                        Console.WriteLine("Data e ora:");
+                        Console.WriteLine(messaggio_client[5]);
+                        messaggio_client[6] = messaggio_client[6].Substring(0, messaggio_client[6].Length - 5);
+                        Console.WriteLine(messaggio_client[6]);
+
+                        path = "RICARICHE/" + messaggio_client[1] + ".txt";
+                        lineappend = messaggio_client[5] + ';' + messaggio_client[6] + ';' + messaggio_client[3] + ';' + messaggio_client[2] + ';' + messaggio_client[4] + "\n";
+                        File.AppendAllText(path, lineappend);
                         break;
                 }
             }

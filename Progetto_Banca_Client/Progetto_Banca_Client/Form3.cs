@@ -315,6 +315,7 @@ namespace Progetto_Banca_Client
         // Pulsante INVIA bonifico
         private void button_invia_bon_Click(object sender, EventArgs e)
         {
+            
            DialogResult dr = MessageBox.Show("CLICCA 'SI' PER CONFERMARE L'OPERAZIONE", "Conferma", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
 
            if (dr == DialogResult.Yes)
@@ -327,9 +328,14 @@ namespace Progetto_Banca_Client
                     string hour = DateTime.Now.ToString("HH:mm");
                     double new_saldo = f.saldo_disp() - importo();
                     string new_saldo_string = new_saldo.ToString();
+                    char lastCharacter = new_saldo_string[new_saldo_string.Length - 1];
+                    if (lastCharacter == '0')
+                    {
+                        new_saldo_string = new_saldo_string + ",00";
+                    }
 
-                    // Data buffer for incoming data.  
-                    byte[] bytes_ok = new byte[1024];
+                        // Data buffer for incoming data.  
+                        byte[] bytes_ok = new byte[1024];
 
                     // Connect to a remote device.  
                     try
@@ -386,13 +392,20 @@ namespace Progetto_Banca_Client
                     if (checkBox_bon_istantaneo.Checked == true)
                     {
                         
-                        char lastCharacter = new_saldo_string[new_saldo_string.Length - 1];
+                        
                         if (lastCharacter != '0')
                         {
                             f.label_saldo_contabile.Text = new_saldo.ToString() + " €";
                             f.label_saldo_disponibile.Text = new_saldo.ToString() + " €";
                             f.Refresh();
                             MessageBox.Show("OPERAZIONE ESEGUITA CON SUCCESSO");
+                            textBox_iban.Text = "";
+                            textBox_causale.Text = "";
+                            textBox_importo.Text = "0,00 €";
+                            checkBox_det_fisc.Checked = false;
+                            checkBox_bon_istantaneo.Checked = false;
+                            checkBox_bon_ordinario.Checked = false;
+                            f.Refresh();
                         }
                         else
                         {
@@ -400,25 +413,46 @@ namespace Progetto_Banca_Client
                             f.label_saldo_disponibile.Text = new_saldo.ToString() + ",00 €";
                             f.Refresh();
                             MessageBox.Show("OPERAZIONE ESEGUITA CON SUCCESSO");
+                            textBox_iban.Text = "";
+                            textBox_causale.Text = "";
+                            textBox_importo.Text = "0,00 €";
+                            checkBox_det_fisc.Checked = false;
+                            checkBox_bon_istantaneo.Checked = false;
+                            checkBox_bon_ordinario.Checked = false;
+                            f.Refresh();
                         }
-                  }
+
+                    }
                   else if(checkBox_bon_ordinario.Checked == true)
                   {
                         timer_bon_ord.Start();
-                        char lastCharacter = new_saldo_string[new_saldo_string.Length - 1];
                         if (lastCharacter != '0')
                         {
                             f.label_saldo_disponibile.Text = new_saldo.ToString() + " €";
                             f.Refresh();
                             MessageBox.Show("OPERAZIONE ESEGUITA CON SUCCESSO");
+                            textBox_iban.Text = "";
+                            textBox_causale.Text = "";
+                            textBox_importo.Text = "0,00 €";
+                            checkBox_det_fisc.Checked = false;
+                            checkBox_bon_istantaneo.Checked = false;
+                            checkBox_bon_ordinario.Checked = false;
+                            f.Refresh();
                         }
                         else
                         {
                             f.label_saldo_disponibile.Text = new_saldo.ToString() + ",00 €";
                             f.Refresh();
                             MessageBox.Show("OPERAZIONE ESEGUITA CON SUCCESSO");
+                            textBox_iban.Text = "";
+                            textBox_causale.Text = "";
+                            textBox_importo.Text = "0,00 €";
+                            checkBox_det_fisc.Checked = false;
+                            checkBox_bon_istantaneo.Checked = false;
+                            checkBox_bon_ordinario.Checked = false;
+                            f.Refresh();
                         }
-                  }
+                    }
                }
                else
                {
@@ -476,6 +510,112 @@ namespace Progetto_Banca_Client
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button_invia_ricarica_Click(object sender, EventArgs e)
+        {
+
+            DialogResult dr = MessageBox.Show("CLICCA 'SI' PER CONFERMARE L'OPERAZIONE", "Conferma", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+
+            if (dr == DialogResult.Yes)
+            {
+                if (comboBox_num_carta.Text != "" && textBox_importo.Text != "0,00 €" && textBox_importo.Text != "" && (f.saldo_disp() - importo()) >= 0)
+                {
+
+                    DateTime thisDay = DateTime.Today;
+                    string date = thisDay.ToString("dd/MM/yyyy");
+                    string hour = DateTime.Now.ToString("HH:mm");
+                    double new_saldo = f.saldo_disp() - importo();
+                    string new_saldo_string = new_saldo.ToString();
+                    char lastCharacter = new_saldo_string[new_saldo_string.Length - 1];
+                    if (lastCharacter == '0')
+                    {
+                        new_saldo_string = new_saldo_string + ",00";
+                    }
+
+                        // Data buffer for incoming data.  
+                        byte[] bytes_ok = new byte[1024];
+
+                    // Connect to a remote device.  
+                    try
+                    {
+                        // Establish the remote endpoint for the socket.  
+                        // This example uses port 11000 on the local computer.  
+                        IPAddress ipAddress = System.Net.IPAddress.Parse("127.0.0.1");
+                        IPEndPoint remoteEP = new IPEndPoint(ipAddress, 5000);
+
+                        // Create a TCP/IP  socket.  
+                        Socket socket = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
+
+                        // Connect the socket to the remote endpoint. Catch any errors.  
+                        try
+                        {
+                            socket.Connect(remoteEP);
+                            // Encode the data string into a byte array.  
+                            byte[] msg = Encoding.ASCII.GetBytes("ricarica" + ';' + f.label_iban.Text  + ';' + textBox_importo.Text + ';' + comboBox_num_carta.Text + ';' + new_saldo_string + ';' + label_date.Text + ';' + hour + "<EOF>");
+                            // Send the data through the socket.  
+                            int bytesSent = socket.Send(msg);
+                            // Release the socket.  
+                            socket.Shutdown(SocketShutdown.Both);
+                            socket.Close();
+
+                        }
+                        catch (ArgumentNullException ane)
+                        {
+                            MessageBox.Show("ArgumentNullException : {0}", ane.ToString());
+                        }
+                        catch (SocketException se)
+                        {
+                            MessageBox.Show("SocketException : {0}", se.ToString());
+                        }
+                        catch (Exception i)
+                        {
+                            MessageBox.Show("Unexpected exception : {0}", i.ToString());
+                        }
+
+                    }
+                    catch (Exception ai)
+                    {
+                        MessageBox.Show(ai.ToString());
+                    }
+
+                        if (lastCharacter != '0')
+                        {
+                            f.label_saldo_contabile.Text = new_saldo.ToString() + " €";
+                            f.label_saldo_disponibile.Text = new_saldo.ToString() + " €";
+                            f.Refresh();
+                            MessageBox.Show("OPERAZIONE ESEGUITA CON SUCCESSO");
+                            textBox_importo.Text = "0,00 €";
+                            comboBox_num_carta.Text = "";
+                        f.Refresh();
+                    }
+                    else
+                        {
+                            f.label_saldo_contabile.Text = new_saldo.ToString() + ",00 €";
+                            f.label_saldo_disponibile.Text = new_saldo.ToString() + ",00 €";
+                            f.Refresh();
+                            MessageBox.Show("OPERAZIONE ESEGUITA CON SUCCESSO");
+                            textBox_importo.Text = "0,00 €";
+                            comboBox_num_carta.Text = "";
+                        f.Refresh();
+
+                    }
+                }
+                else
+                {
+                    if ((f.saldo_disp() - importo()) < 0)
+                    {
+                        MessageBox.Show("SALDO INSUFFICIENTE");
+                    }
+                    else
+                    {
+                        MessageBox.Show("OPERAZIONE NON ESEGUITA...     CONTROLLARE I DATI INSERITI.");
+                    }
+                }
+            }
+            else if (dr == DialogResult.Cancel)
+            {
+            }
         }
     }
 }
