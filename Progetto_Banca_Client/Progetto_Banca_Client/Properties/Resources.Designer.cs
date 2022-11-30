@@ -73,6 +73,16 @@ namespace Progetto_Banca_Client.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap excerpt_icon_144358 {
+            get {
+                object obj = ResourceManager.GetObject("excerpt_icon_144358", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_24_40 {
             get {
                 object obj = ResourceManager.GetObject("icons8_24_40", resourceCulture);

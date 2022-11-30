@@ -31,13 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.label_date = new System.Windows.Forms.Label();
-            this.panel_logo = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label_conto_ben = new System.Windows.Forms.Label();
@@ -52,19 +46,25 @@
             this.label_tipo_bon = new System.Windows.Forms.Label();
             this.checkBox_bon_ordinario = new System.Windows.Forms.CheckBox();
             this.checkBox_bon_istantaneo = new System.Windows.Forms.CheckBox();
-            this.pictureBox_att = new System.Windows.Forms.PictureBox();
             this.label_att_1 = new System.Windows.Forms.Label();
             this.label_att_2 = new System.Windows.Forms.Label();
             this.label_num_carta = new System.Windows.Forms.Label();
             this.label_dati_ricarica = new System.Windows.Forms.Label();
             this.comboBox_num_carta = new System.Windows.Forms.ComboBox();
             this.timer_bon_ord = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox_att = new System.Windows.Forms.PictureBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel_logo = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.button_invia_bon = new Progetto_Banca_Client.button();
             this.button_invia_ricarica = new Progetto_Banca_Client.button();
             this.panel2.SuspendLayout();
-            this.panel_logo.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_att)).BeginInit();
+            this.panel_logo.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -82,90 +82,6 @@
             this.panel2.Size = new System.Drawing.Size(180, 565);
             this.panel2.TabIndex = 1;
             // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Green;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 350);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(180, 85);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "Pagamenti";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Green;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Image = global::Progetto_Banca_Client.Properties.Resources.icons8_carte_bancarie_40;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 265);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(180, 85);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Ricarica Carta";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Green;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Image = global::Progetto_Banca_Client.Properties.Resources.icons8_24_40;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 180);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(180, 85);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "F24";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Green;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = global::Progetto_Banca_Client.Properties.Resources.icons8_frecce_direzionali_40;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 95);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(180, 85);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Bonifici";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // label_date
             // 
             this.label_date.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -177,26 +93,6 @@
             this.label_date.Size = new System.Drawing.Size(65, 15);
             this.label_date.TabIndex = 9;
             this.label_date.Text = "label_date";
-            // 
-            // panel_logo
-            // 
-            this.panel_logo.BackColor = System.Drawing.Color.White;
-            this.panel_logo.BackgroundImage = global::Progetto_Banca_Client.Properties.Resources.LogoBcc;
-            this.panel_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel_logo.Controls.Add(this.panel3);
-            this.panel_logo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_logo.Location = new System.Drawing.Point(0, 0);
-            this.panel_logo.Name = "panel_logo";
-            this.panel_logo.Size = new System.Drawing.Size(180, 95);
-            this.panel_logo.TabIndex = 2;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.LightCoral;
-            this.panel3.Location = new System.Drawing.Point(178, 95);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(759, 470);
-            this.panel3.TabIndex = 0;
             // 
             // panel1
             // 
@@ -362,17 +258,6 @@
             this.checkBox_bon_istantaneo.Visible = false;
             this.checkBox_bon_istantaneo.Click += new System.EventHandler(this.checkBox_bon_istantaneo_Click);
             // 
-            // pictureBox_att
-            // 
-            this.pictureBox_att.Image = global::Progetto_Banca_Client.Properties.Resources.icons8_attenzione_96;
-            this.pictureBox_att.Location = new System.Drawing.Point(529, 233);
-            this.pictureBox_att.Name = "pictureBox_att";
-            this.pictureBox_att.Size = new System.Drawing.Size(96, 96);
-            this.pictureBox_att.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox_att.TabIndex = 18;
-            this.pictureBox_att.TabStop = false;
-            this.pictureBox_att.Visible = false;
-            // 
             // label_att_1
             // 
             this.label_att_1.AutoSize = true;
@@ -437,6 +322,121 @@
             this.timer_bon_ord.Interval = 10000;
             this.timer_bon_ord.Tick += new System.EventHandler(this.timer_bon_ord_Tick);
             // 
+            // pictureBox_att
+            // 
+            this.pictureBox_att.Image = global::Progetto_Banca_Client.Properties.Resources.icons8_attenzione_96;
+            this.pictureBox_att.Location = new System.Drawing.Point(529, 233);
+            this.pictureBox_att.Name = "pictureBox_att";
+            this.pictureBox_att.Size = new System.Drawing.Size(96, 96);
+            this.pictureBox_att.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox_att.TabIndex = 18;
+            this.pictureBox_att.TabStop = false;
+            this.pictureBox_att.Visible = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(0, 350);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.button4.Size = new System.Drawing.Size(180, 85);
+            this.button4.TabIndex = 12;
+            this.button4.Text = "Pagamenti";
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Image = global::Progetto_Banca_Client.Properties.Resources.icons8_carte_bancarie_40;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(0, 265);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(180, 85);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "Ricarica Carta";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Image = global::Progetto_Banca_Client.Properties.Resources.icons8_24_40;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(0, 180);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(180, 85);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "F24";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Image = global::Progetto_Banca_Client.Properties.Resources.icons8_frecce_direzionali_40;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 95);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(180, 85);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Bonifici";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel_logo
+            // 
+            this.panel_logo.BackColor = System.Drawing.Color.White;
+            this.panel_logo.BackgroundImage = global::Progetto_Banca_Client.Properties.Resources.LogoBcc;
+            this.panel_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel_logo.Controls.Add(this.panel3);
+            this.panel_logo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_logo.Location = new System.Drawing.Point(0, 0);
+            this.panel_logo.Name = "panel_logo";
+            this.panel_logo.Size = new System.Drawing.Size(180, 95);
+            this.panel_logo.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.LightCoral;
+            this.panel3.Location = new System.Drawing.Point(178, 95);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(759, 470);
+            this.panel3.TabIndex = 0;
+            // 
             // button_invia_bon
             // 
             this.button_invia_bon.BackColor = System.Drawing.Color.Green;
@@ -446,7 +446,7 @@
             this.button_invia_bon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_invia_bon.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_invia_bon.ForeColor = System.Drawing.Color.White;
-            this.button_invia_bon.Location = new System.Drawing.Point(719, 455);
+            this.button_invia_bon.Location = new System.Drawing.Point(719, 456);
             this.button_invia_bon.Name = "button_invia_bon";
             this.button_invia_bon.Size = new System.Drawing.Size(157, 62);
             this.button_invia_bon.TabIndex = 17;
@@ -464,7 +464,7 @@
             this.button_invia_ricarica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_invia_ricarica.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_invia_ricarica.ForeColor = System.Drawing.Color.White;
-            this.button_invia_ricarica.Location = new System.Drawing.Point(588, 280);
+            this.button_invia_ricarica.Location = new System.Drawing.Point(588, 281);
             this.button_invia_ricarica.Name = "button_invia_ricarica";
             this.button_invia_ricarica.Size = new System.Drawing.Size(157, 62);
             this.button_invia_ricarica.TabIndex = 24;
@@ -510,10 +510,10 @@
             this.Text = "Area_Personale Operazioni";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel_logo.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_att)).EndInit();
+            this.panel_logo.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -521,7 +521,6 @@
 
         #endregion
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label_date;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel_logo;
         private System.Windows.Forms.Button button4;
@@ -551,5 +550,6 @@
         private button button_invia_ricarica;
         public System.Windows.Forms.ComboBox comboBox_num_carta;
         public System.Windows.Forms.Timer timer_bon_ord;
+        public System.Windows.Forms.Label label_date;
     }
 }

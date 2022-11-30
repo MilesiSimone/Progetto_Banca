@@ -83,6 +83,7 @@ public class SynchronousSocketListener
                         handler.Send(msg);
                         handler.Shutdown(SocketShutdown.Both);
                         handler.Close();
+
                         break;
 
                     case "bonifico":
@@ -102,25 +103,29 @@ public class SynchronousSocketListener
                         messaggio_client[10] = messaggio_client[10].Substring(0, messaggio_client[10].Length - 5);
                         Console.WriteLine(messaggio_client[10]);
 
-                        //lines = File.ReadAllLines("clienti.txt");
-                        //info = new string[9];
-                        //using (StreamWriter sw = new StreamWriter("clienti.txt"))
-                        //{
-                        //    foreach (string line in lines)
-                        //    {
-                        //        info = line.Split(';');
-                        //        if (messaggio_client[1] == info[4])
-                        //        {
-                        //            //sw.WriteLine(info[0] + ';' + info[1] + ';' + info[2] + ';' + info[3] + ';' + info[4] + ';' + messaggio_client[4] + ';' + messaggio_client[4] + ';' + info[7] + ';' + info[8]);
-                        //            break;
-                        //        }
-                        //    }
-                        //}
+                        string[] lines_read = File.ReadAllLines("clienti.txt");
+                        info = new string[9];
+                        foreach (string line in lines_read)
+                        {
+                            info = line.Split(';');
+                            if (messaggio_client[1] == info[4])
+                            {
+                                File.WriteAllText("clienti.txt", info[0] + ';' + info[1] + ';' + info[2] + ';' + info[3] + ';' + info[4] + ';' + messaggio_client[4] + ';' + messaggio_client[4] + ';' + info[7] + ';' + info[8]);
+                                break;
+                            }
+                            else
+                            {
+                                File.WriteAllText("clienti.txt" , line);
+                            }
+                        }
+                        
 
                         string path = "BONIFICI/" + messaggio_client[1] + ".txt";
                         string lineappend = messaggio_client[9] + ';' + messaggio_client[10] + ';' + messaggio_client[2] + ';' + messaggio_client[3] + ';' + messaggio_client[4] + ';' + messaggio_client[5] + ';' + messaggio_client[6] + ';' + messaggio_client[7] + ';' + messaggio_client[8] + "\n";
                         File.AppendAllText(path, lineappend);
+
                         break;
+
                     case "ricarica":
 
                         Console.WriteLine("RICARICA:\n");
@@ -139,6 +144,7 @@ public class SynchronousSocketListener
                         path = "RICARICHE/" + messaggio_client[1] + ".txt";
                         lineappend = messaggio_client[5] + ';' + messaggio_client[6] + ';' + messaggio_client[3] + ';' + messaggio_client[2] + ';' + messaggio_client[4] + "\n";
                         File.AppendAllText(path, lineappend);
+
                         break;
                 }
             }

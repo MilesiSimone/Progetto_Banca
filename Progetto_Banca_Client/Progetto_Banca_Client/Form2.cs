@@ -144,5 +144,12 @@ namespace Progetto_Banca_Client
 
             e.Cancel = (result == DialogResult.No);
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+               Form4 f4 = new Form4();
+            f4.Show();
+        }
+        
     }
 }

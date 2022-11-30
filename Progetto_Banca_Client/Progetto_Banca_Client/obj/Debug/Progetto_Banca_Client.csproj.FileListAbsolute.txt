@@ -13,3 +13,4 @@ C:\Users\UTENTE\Source\Repos\MilesiSimone\Progetto_Banca\Progetto_Banca_Client\P
 C:\Users\UTENTE\Source\Repos\MilesiSimone\Progetto_Banca\Progetto_Banca_Client\Progetto_Banca_Client\obj\Debug\Progetto_Banca_Client.Form2.resources
 C:\Users\UTENTE\source\repos\MilesiSimone\Progetto_Banca\Progetto_Banca_Client\Progetto_Banca_Client\obj\Debug\Progetto_Banca_Client.panel.panel.resources
 C:\Users\UTENTE\Source\Repos\MilesiSimone\Progetto_Banca\Progetto_Banca_Client\Progetto_Banca_Client\obj\Debug\Progetto_Banca_Client.Form3.resources
+C:\Users\UTENTE\source\repos\MilesiSimone\Progetto_Banca\Progetto_Banca_Client\Progetto_Banca_Client\obj\Debug\Progetto_Banca_Client.Form4.resources
