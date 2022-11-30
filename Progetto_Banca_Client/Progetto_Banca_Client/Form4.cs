@@ -34,15 +34,10 @@ namespace Progetto_Banca_Client
             }
             s = 1;
             button_bon_view.ForeColor = Color.Green;
-            //listView.View = View.Details;
-            listView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            listView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
-            listView.Items.Add("ciao");
-            listView.Columns.Add("DATA");
-            listView.Columns.Add("ORA");
-            listView.Columns.Add("IBAN BENEFICIARIO");
-            listView.Columns.Add("IMPORTO");
-            listView.Columns.Add("CAUSALE");
+            listView_BON.View = View.Details;
+            listView_BON.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            listView_BON.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            listView_BON.Items.Add("ciao");
         }
 
         private void button_ricariche_view_Click(object sender, EventArgs e)

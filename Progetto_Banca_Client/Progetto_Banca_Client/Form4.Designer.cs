@@ -33,7 +33,7 @@
             this.panel_logo = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.listView = new System.Windows.Forms.ListView();
+            this.listView_BON = new System.Windows.Forms.ListView();
             this.Data = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Ora = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Iban_benficiario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -41,6 +41,11 @@
             this.button_bon_view = new System.Windows.Forms.Button();
             this.button_ricariche_view = new System.Windows.Forms.Button();
             this.label_date = new System.Windows.Forms.Label();
+            this.causale = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.detr_fisc = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.bon_ordinario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.bon_istantaneo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.saldo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel_logo.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -88,39 +93,46 @@
             this.panel1.Size = new System.Drawing.Size(800, 95);
             this.panel1.TabIndex = 4;
             // 
-            // listView
+            // listView_BON
             // 
-            this.listView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.listView_BON.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listView_BON.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listView_BON.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Data,
             this.Ora,
             this.Iban_benficiario,
-            this.Importo});
-            this.listView.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView.HideSelection = false;
-            this.listView.Location = new System.Drawing.Point(186, 101);
-            this.listView.Name = "listView";
-            this.listView.Size = new System.Drawing.Size(602, 337);
-            this.listView.TabIndex = 5;
-            this.listView.UseCompatibleStateImageBehavior = false;
+            this.Importo,
+            this.causale,
+            this.detr_fisc,
+            this.bon_ordinario,
+            this.bon_istantaneo,
+            this.saldo});
+            this.listView_BON.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView_BON.GridLines = true;
+            this.listView_BON.HideSelection = false;
+            this.listView_BON.Location = new System.Drawing.Point(186, 101);
+            this.listView_BON.Name = "listView_BON";
+            this.listView_BON.Size = new System.Drawing.Size(602, 337);
+            this.listView_BON.TabIndex = 5;
+            this.listView_BON.UseCompatibleStateImageBehavior = false;
             // 
             // Data
             // 
-            this.Data.Text = "Data";
+            this.Data.Text = "DATA";
             // 
             // Ora
             // 
-            this.Ora.Text = "Ora";
+            this.Ora.Text = "ORA";
             // 
             // Iban_benficiario
             // 
-            this.Iban_benficiario.Text = "Iban Beneficiario";
+            this.Iban_benficiario.Text = "IBAN BENEFICIARIO";
             // 
             // Importo
             // 
-            this.Importo.Text = "Importo";
+            this.Importo.Text = "IMPORTO";
             // 
             // button_bon_view
             // 
@@ -177,6 +189,26 @@
             this.label_date.TabIndex = 14;
             this.label_date.Text = "label_date";
             // 
+            // causale
+            // 
+            this.causale.Text = "CAUSALE";
+            // 
+            // detr_fisc
+            // 
+            this.detr_fisc.Text = "DETR. FISCALE";
+            // 
+            // bon_ordinario
+            // 
+            this.bon_ordinario.Text = "BON. ORDINARIO";
+            // 
+            // bon_istantaneo
+            // 
+            this.bon_istantaneo.Text = "BON. ISTANTANEO";
+            // 
+            // saldo
+            // 
+            this.saldo.Text = "SALDO";
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,11 +218,12 @@
             this.Controls.Add(this.label_date);
             this.Controls.Add(this.button_ricariche_view);
             this.Controls.Add(this.button_bon_view);
-            this.Controls.Add(this.listView);
+            this.Controls.Add(this.listView_BON);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "Form4";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estratto conto";
             this.Load += new System.EventHandler(this.Form4_Load);
             this.panel_logo.ResumeLayout(false);
@@ -207,7 +240,7 @@
         private System.Windows.Forms.Panel panel_logo;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ListView listView;
+        private System.Windows.Forms.ListView listView_BON;
         private System.Windows.Forms.ColumnHeader Data;
         private System.Windows.Forms.ColumnHeader Ora;
         private System.Windows.Forms.ColumnHeader Iban_benficiario;
@@ -215,5 +248,10 @@
         private System.Windows.Forms.Button button_bon_view;
         private System.Windows.Forms.Button button_ricariche_view;
         private System.Windows.Forms.Label label_date;
+        private System.Windows.Forms.ColumnHeader causale;
+        private System.Windows.Forms.ColumnHeader detr_fisc;
+        private System.Windows.Forms.ColumnHeader bon_ordinario;
+        private System.Windows.Forms.ColumnHeader bon_istantaneo;
+        private System.Windows.Forms.ColumnHeader saldo;
     }
 }
