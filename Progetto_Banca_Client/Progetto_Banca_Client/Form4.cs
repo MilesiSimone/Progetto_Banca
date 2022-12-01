@@ -156,6 +156,7 @@ namespace Progetto_Banca_Client
         private void button_ricariche_view_Click(object sender, EventArgs e)
         {
             attivo_bon = false;
+            listView_BON.Items.Clear();
             listView_BON.Visible = false;
             listView_RIC.Visible = true;
             if (attivo_ric != true)
