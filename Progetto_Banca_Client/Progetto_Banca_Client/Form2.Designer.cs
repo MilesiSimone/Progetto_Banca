@@ -46,10 +46,10 @@
             this.label_utente = new System.Windows.Forms.Label();
             this.label_saldocont = new System.Windows.Forms.Label();
             this.label_iban = new System.Windows.Forms.Label();
+            this.pictureBox_cassaforte = new System.Windows.Forms.PictureBox();
             this.button_autorizzazioni = new Progetto_Banca_Client.button();
             this.button_impostazioni = new Progetto_Banca_Client.button();
             this.button_operazioni = new Progetto_Banca_Client.button();
-            this.pictureBox_cassaforte = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -222,6 +222,19 @@
             this.label_iban.TabIndex = 3;
             this.label_iban.Text = "IT05D571025971054100028120";
             // 
+            // pictureBox_cassaforte
+            // 
+            this.pictureBox_cassaforte.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox_cassaforte.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBox_cassaforte.Image = global::Progetto_Banca_Client.Properties.Resources.icons8_cassaforte_96;
+            this.pictureBox_cassaforte.Location = new System.Drawing.Point(7, 116);
+            this.pictureBox_cassaforte.Name = "pictureBox_cassaforte";
+            this.pictureBox_cassaforte.Size = new System.Drawing.Size(161, 136);
+            this.pictureBox_cassaforte.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_cassaforte.TabIndex = 12;
+            this.pictureBox_cassaforte.TabStop = false;
+            this.pictureBox_cassaforte.Visible = false;
+            // 
             // button_autorizzazioni
             // 
             this.button_autorizzazioni.BackColor = System.Drawing.Color.Green;
@@ -271,19 +284,6 @@
             this.button_operazioni.Text = "Operazioni";
             this.button_operazioni.UseVisualStyleBackColor = false;
             this.button_operazioni.Click += new System.EventHandler(this.button_operazioni_Click);
-            // 
-            // pictureBox_cassaforte
-            // 
-            this.pictureBox_cassaforte.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox_cassaforte.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox_cassaforte.Image = global::Progetto_Banca_Client.Properties.Resources.icons8_cassaforte_96;
-            this.pictureBox_cassaforte.Location = new System.Drawing.Point(7, 116);
-            this.pictureBox_cassaforte.Name = "pictureBox_cassaforte";
-            this.pictureBox_cassaforte.Size = new System.Drawing.Size(161, 136);
-            this.pictureBox_cassaforte.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_cassaforte.TabIndex = 12;
-            this.pictureBox_cassaforte.TabStop = false;
-            this.pictureBox_cassaforte.Visible = false;
             // 
             // pictureBox4
             // 
@@ -378,6 +378,7 @@
             this.Controls.Add(this.pictureBox_mostra_password);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Area Personale Client";

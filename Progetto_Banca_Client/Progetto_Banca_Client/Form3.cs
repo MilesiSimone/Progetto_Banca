@@ -587,7 +587,7 @@ namespace Progetto_Banca_Client
                             MessageBox.Show("OPERAZIONE ESEGUITA CON SUCCESSO");
                             textBox_importo.Text = "0,00 €";
                             comboBox_num_carta.Text = "";
-                        f.Refresh();
+                            f.Refresh();
                     }
                     else
                         {
@@ -597,8 +597,7 @@ namespace Progetto_Banca_Client
                             MessageBox.Show("OPERAZIONE ESEGUITA CON SUCCESSO");
                             textBox_importo.Text = "0,00 €";
                             comboBox_num_carta.Text = "";
-                        f.Refresh();
-
+                             f.Refresh();
                     }
                 }
                 else

@@ -51,6 +51,7 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.new_saldo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel_logo.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -116,6 +117,7 @@
             this.saldo});
             this.listView_BON.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView_BON.GridLines = true;
+            this.listView_BON.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView_BON.HideSelection = false;
             this.listView_BON.Location = new System.Drawing.Point(186, 101);
             this.listView_BON.Name = "listView_BON";
@@ -130,34 +132,42 @@
             // Ora
             // 
             this.Ora.Text = "ORA";
+            this.Ora.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Iban_benficiario
             // 
             this.Iban_benficiario.Text = "IBAN BENEFICIARIO";
+            this.Iban_benficiario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Importo
             // 
             this.Importo.Text = "IMPORTO";
+            this.Importo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // causale
             // 
             this.causale.Text = "CAUSALE";
+            this.causale.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // detr_fisc
             // 
             this.detr_fisc.Text = "DETR. FISCALE";
+            this.detr_fisc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // bon_ordinario
             // 
             this.bon_ordinario.Text = "BON. ORDINARIO";
+            this.bon_ordinario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // bon_istantaneo
             // 
             this.bon_istantaneo.Text = "BON. ISTANTANEO";
+            this.bon_istantaneo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // saldo
             // 
             this.saldo.Text = "SALDO";
+            this.saldo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button_bon_view
             // 
@@ -224,14 +234,15 @@
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
-            this.columnHeader4});
+            this.columnHeader4,
+            this.new_saldo});
             this.listView_RIC.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView_RIC.GridLines = true;
             this.listView_RIC.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView_RIC.HideSelection = false;
             this.listView_RIC.Location = new System.Drawing.Point(186, 101);
             this.listView_RIC.Name = "listView_RIC";
-            this.listView_RIC.Size = new System.Drawing.Size(964, 337);
+            this.listView_RIC.Size = new System.Drawing.Size(751, 337);
             this.listView_RIC.TabIndex = 15;
             this.listView_RIC.UseCompatibleStateImageBehavior = false;
             this.listView_RIC.Visible = false;
@@ -243,14 +254,22 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "ORA";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "NUMERO CARTA";
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "IMPORTO";
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // new_saldo
+            // 
+            this.new_saldo.Text = "SALDO";
+            this.new_saldo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form4
             // 
@@ -302,5 +321,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader new_saldo;
     }
 }

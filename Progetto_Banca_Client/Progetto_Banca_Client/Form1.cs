@@ -146,6 +146,7 @@ namespace Progetto_Banca_Client
                         label_error.Visible = true;
                         textBox_username.Text = "";
                         textBox_password.Text = "";
+                        textBox_username.TabIndex = 1;
                     }
                     
                     // Release the socket.  

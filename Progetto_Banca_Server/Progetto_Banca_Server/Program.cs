@@ -20,6 +20,7 @@ public class SynchronousSocketListener
         // Data buffer for incoming data.  
         byte[] bytes = new Byte[1024];
         byte[] msg_list_bon = new Byte[1024];
+        byte[] msg_list_ric = new Byte[1024];
 
         // Establish the local endpoint for the socket.  
         // Dns.GetHostName returns the name of the   
@@ -178,6 +179,42 @@ public class SynchronousSocketListener
                             // Echo the data back to the client.  
                             byte[] msg_no_bon = Encoding.ASCII.GetBytes(msg_nonesiste);
                             handler.Send(msg_no_bon);
+                            handler.Shutdown(SocketShutdown.Both);
+                            handler.Close();
+                        }
+
+                        break;
+
+                    case "lista_ricariche":
+
+                        Console.WriteLine("RICHIESTA LISTA RICARICHE:\n");
+                        Console.WriteLine("Iban utente:");
+                        messaggio_client[1] = messaggio_client[1].Substring(0, messaggio_client[1].Length - 5);
+                        Console.WriteLine(messaggio_client[1]);
+
+                        msg_nonesiste = "";
+                        string msg_ricariche = "";
+                        path = "RICARICHE/" + messaggio_client[1] + ".txt";
+                        if (File.Exists(path))
+                        {
+                            string[] lines_ric = File.ReadAllLines(path);
+                            string[] info_ric = new string[5];
+                            foreach (string line in lines_ric)
+                            {
+                                info_ric = line.Split(';');
+                                msg_ricariche = msg_ricariche + info_ric[0] + ";" + info_ric[1] + ";" + info_ric[2] + ";" + info_ric[3] + ";" + info_ric[4] + "$";
+                            }
+                            msg_list_ric = Encoding.ASCII.GetBytes(msg_ricariche);
+                            handler.Send(msg_list_ric);
+                            handler.Shutdown(SocketShutdown.Both);
+                            handler.Close();
+                        }
+                        else
+                        {
+                            msg_nonesiste = "non_esiste";
+                            // Echo the data back to the client.  
+                            byte[] msg_no_ric = Encoding.ASCII.GetBytes(msg_nonesiste);
+                            handler.Send(msg_no_ric);
                             handler.Shutdown(SocketShutdown.Both);
                             handler.Close();
                         }
