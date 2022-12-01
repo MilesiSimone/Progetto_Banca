@@ -38,14 +38,19 @@
             this.Ora = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Iban_benficiario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Importo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button_bon_view = new System.Windows.Forms.Button();
-            this.button_ricariche_view = new System.Windows.Forms.Button();
-            this.label_date = new System.Windows.Forms.Label();
             this.causale = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.detr_fisc = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.bon_ordinario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.bon_istantaneo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.saldo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button_bon_view = new System.Windows.Forms.Button();
+            this.button_ricariche_view = new System.Windows.Forms.Button();
+            this.label_date = new System.Windows.Forms.Label();
+            this.listView_RIC = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel_logo.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -56,7 +61,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(400, 36);
+            this.label1.Location = new System.Drawing.Point(517, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(232, 29);
             this.label1.TabIndex = 0;
@@ -90,7 +95,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 95);
+            this.panel1.Size = new System.Drawing.Size(1034, 95);
             this.panel1.TabIndex = 4;
             // 
             // listView_BON
@@ -114,7 +119,7 @@
             this.listView_BON.HideSelection = false;
             this.listView_BON.Location = new System.Drawing.Point(186, 101);
             this.listView_BON.Name = "listView_BON";
-            this.listView_BON.Size = new System.Drawing.Size(602, 337);
+            this.listView_BON.Size = new System.Drawing.Size(836, 337);
             this.listView_BON.TabIndex = 5;
             this.listView_BON.UseCompatibleStateImageBehavior = false;
             // 
@@ -133,6 +138,26 @@
             // Importo
             // 
             this.Importo.Text = "IMPORTO";
+            // 
+            // causale
+            // 
+            this.causale.Text = "CAUSALE";
+            // 
+            // detr_fisc
+            // 
+            this.detr_fisc.Text = "DETR. FISCALE";
+            // 
+            // bon_ordinario
+            // 
+            this.bon_ordinario.Text = "BON. ORDINARIO";
+            // 
+            // bon_istantaneo
+            // 
+            this.bon_istantaneo.Text = "BON. ISTANTANEO";
+            // 
+            // saldo
+            // 
+            this.saldo.Text = "SALDO";
             // 
             // button_bon_view
             // 
@@ -189,32 +214,51 @@
             this.label_date.TabIndex = 14;
             this.label_date.Text = "label_date";
             // 
-            // causale
+            // listView_RIC
             // 
-            this.causale.Text = "CAUSALE";
+            this.listView_RIC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listView_RIC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listView_RIC.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.listView_RIC.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView_RIC.GridLines = true;
+            this.listView_RIC.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listView_RIC.HideSelection = false;
+            this.listView_RIC.Location = new System.Drawing.Point(186, 101);
+            this.listView_RIC.Name = "listView_RIC";
+            this.listView_RIC.Size = new System.Drawing.Size(836, 337);
+            this.listView_RIC.TabIndex = 15;
+            this.listView_RIC.UseCompatibleStateImageBehavior = false;
+            this.listView_RIC.Visible = false;
             // 
-            // detr_fisc
+            // columnHeader1
             // 
-            this.detr_fisc.Text = "DETR. FISCALE";
+            this.columnHeader1.Text = "DATA";
             // 
-            // bon_ordinario
+            // columnHeader2
             // 
-            this.bon_ordinario.Text = "BON. ORDINARIO";
+            this.columnHeader2.Text = "ORA";
             // 
-            // bon_istantaneo
+            // columnHeader3
             // 
-            this.bon_istantaneo.Text = "BON. ISTANTANEO";
+            this.columnHeader3.Text = "NUMERO CARTA";
             // 
-            // saldo
+            // columnHeader4
             // 
-            this.saldo.Text = "SALDO";
+            this.columnHeader4.Text = "IMPORTO";
             // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1034, 450);
+            this.Controls.Add(this.listView_RIC);
             this.Controls.Add(this.label_date);
             this.Controls.Add(this.button_ricariche_view);
             this.Controls.Add(this.button_bon_view);
@@ -253,5 +297,10 @@
         private System.Windows.Forms.ColumnHeader bon_ordinario;
         private System.Windows.Forms.ColumnHeader bon_istantaneo;
         private System.Windows.Forms.ColumnHeader saldo;
+        private System.Windows.Forms.ListView listView_RIC;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }

@@ -147,7 +147,7 @@ namespace Progetto_Banca_Client
 
         private void label6_Click(object sender, EventArgs e)
         {
-               Form4 f4 = new Form4();
+            Form4 f4 = new Form4(this);
             f4.Show();
         }
         

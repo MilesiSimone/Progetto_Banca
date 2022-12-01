@@ -19,6 +19,7 @@ public class SynchronousSocketListener
     {
         // Data buffer for incoming data.  
         byte[] bytes = new Byte[1024];
+        byte[] msg_list_bon = new Byte[1024];
 
         // Establish the local endpoint for the socket.  
         // Dns.GetHostName returns the name of the   
@@ -103,21 +104,21 @@ public class SynchronousSocketListener
                         messaggio_client[10] = messaggio_client[10].Substring(0, messaggio_client[10].Length - 5);
                         Console.WriteLine(messaggio_client[10]);
 
-                        string[] lines_read = File.ReadAllLines("clienti.txt");
-                        info = new string[9];
-                        foreach (string line in lines_read)
-                        {
-                            info = line.Split(';');
-                            if (messaggio_client[1] == info[4])
-                            {
-                                File.WriteAllText("clienti.txt", info[0] + ';' + info[1] + ';' + info[2] + ';' + info[3] + ';' + info[4] + ';' + messaggio_client[4] + ';' + messaggio_client[4] + ';' + info[7] + ';' + info[8]);
-                                break;
-                            }
-                            else
-                            {
-                                File.WriteAllText("clienti.txt" , line);
-                            }
-                        }
+                        //string[] lines_read = File.ReadAllLines("clienti.txt");
+                        //info = new string[9];
+                        //foreach (string line in lines_read)
+                        //{
+                        //    info = line.Split(';');
+                        //    if (messaggio_client[1] == info[4])
+                        //    {
+                        //        File.WriteAllText("clienti.txt", info[0] + ';' + info[1] + ';' + info[2] + ';' + info[3] + ';' + info[4] + ';' + messaggio_client[4] + ';' + messaggio_client[4] + ';' + info[7] + ';' + info[8]);
+                        //        break;
+                        //    }
+                        //    else
+                        //    {
+                        //        File.WriteAllText("clienti.txt" , line);
+                        //    }
+                        //}
                         
 
                         string path = "BONIFICI/" + messaggio_client[1] + ".txt";
@@ -144,6 +145,42 @@ public class SynchronousSocketListener
                         path = "RICARICHE/" + messaggio_client[1] + ".txt";
                         lineappend = messaggio_client[5] + ';' + messaggio_client[6] + ';' + messaggio_client[3] + ';' + messaggio_client[2] + ';' + messaggio_client[4] + "\n";
                         File.AppendAllText(path, lineappend);
+
+                        break;
+
+                    case "lista_bonifici":
+
+                        Console.WriteLine("RICHIESTA LISTA BONIFICI:\n");
+                        Console.WriteLine("Iban utente:");
+                        messaggio_client[1] = messaggio_client[1].Substring(0, messaggio_client[1].Length - 5);
+                        Console.WriteLine(messaggio_client[1]);
+
+                        string msg_nonesiste = "";
+                        string msg_bonifici = "";
+                        path = "BONIFICI/" + messaggio_client[1] + ".txt";
+                        if (File.Exists(path))
+                        {
+                            string[] lines_bon = File.ReadAllLines(path);
+                            string[] info_bon = new string[20];
+                            foreach (string line in lines_bon)
+                            {
+                                info_bon = line.Split(';');
+                                msg_bonifici = msg_bonifici + info_bon[0] + ";" + info_bon[1] + ";" + info_bon[2] + ";" + info_bon[3] + ";" + info_bon[4] + ";" + info_bon[5] + ";" + info_bon[6] + ";" + info_bon[7] + ";" + info_bon[8] + "$";
+                            }
+                            msg_list_bon = Encoding.ASCII.GetBytes(msg_bonifici);
+                            handler.Send(msg_list_bon);
+                            handler.Shutdown(SocketShutdown.Both);
+                            handler.Close();
+                        }
+                        else
+                        {
+                            msg_nonesiste = "non_esiste";
+                            // Echo the data back to the client.  
+                            byte[] msg_no_bon = Encoding.ASCII.GetBytes(msg_nonesiste);
+                            handler.Send(msg_no_bon);
+                            handler.Shutdown(SocketShutdown.Both);
+                            handler.Close();
+                        }
 
                         break;
                 }
