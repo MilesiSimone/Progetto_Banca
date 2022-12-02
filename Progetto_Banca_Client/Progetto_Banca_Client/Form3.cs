@@ -320,7 +320,7 @@ namespace Progetto_Banca_Client
 
            if (dr == DialogResult.Yes)
            {
-               if (textBox_causale.Text != "" && textBox_iban.Text.Length == 27 && textBox_importo.Text != "0,00 €" && textBox_importo.Text != "" && (checkBox_bon_istantaneo.Checked == true || checkBox_bon_ordinario.Checked == true) && (f.saldo_disp() - importo()) >= 0)
+               if (textBox_causale.Text != "" && textBox_iban.Text.Length == 27 && textBox_iban.Text != f.label_iban.Text && textBox_importo.Text != "0,00 €" && textBox_importo.Text != "" && (checkBox_bon_istantaneo.Checked == true || checkBox_bon_ordinario.Checked == true) && (f.saldo_disp() - importo()) >= 0)
                {
 
                     DateTime thisDay = DateTime.Today;
@@ -425,6 +425,9 @@ namespace Progetto_Banca_Client
                     }
                   else if(checkBox_bon_ordinario.Checked == true)
                   {
+                        Random random = new Random();
+                        int num_temp = random.Next(10000, 30000);
+                        timer_bon_ord.Interval = num_temp;
                         timer_bon_ord.Start();
                         if (lastCharacter != '0')
                         {

@@ -267,7 +267,6 @@
 
         private System.Windows.Forms.PictureBox pictureBox_bcc;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox_password;
         private System.Windows.Forms.Label label_user;
         private System.Windows.Forms.Label label_password;
         private System.Windows.Forms.CheckBox checkBox1;
@@ -280,6 +279,7 @@
         private System.Windows.Forms.LinkLabel linkLabel;
         public System.Windows.Forms.TextBox textBox_username;
         private System.Windows.Forms.ToolTip toolTip;
+        public System.Windows.Forms.TextBox textBox_password;
     }
 }
 

@@ -150,6 +150,24 @@ public class SynchronousSocketListener
                         messaggio_client[6] = messaggio_client[6].Substring(0, messaggio_client[6].Length - 5);
                         Console.WriteLine(messaggio_client[6]);
 
+                        string[] lines_read_ric = File.ReadAllLines("clienti.txt");
+                        string path_temp_ric = "clienti_temp.txt";
+                        string[] info_ric_read = new string[20];
+                        foreach (string line in lines_read_ric)
+                        {
+                            info_ric_read = line.Split(';');
+                            if (messaggio_client[1] == info_ric_read[4])
+                            {
+                                File.AppendAllText(path_temp_ric, info_ric_read[0] + ';' + info_ric_read[1] + ';' + info_ric_read[2] + ';' + info_ric_read[3] + ';' + info_ric_read[4] + ';' + messaggio_client[4] + ';' + messaggio_client[4] + ';' + info_ric_read[7] + ';' + info_ric_read[8] + "\n");
+                            }
+                            else
+                            {
+                                File.AppendAllText(path_temp_ric, info_ric_read[0] + ';' + info_ric_read[1] + ';' + info_ric_read[2] + ';' + info_ric_read[3] + ';' + info_ric_read[4] + ';' + info_ric_read[5] + ';' + info_ric_read[6] + ';' + info_ric_read[7] + ';' + info_ric_read[8] + "\n");
+                            }
+                        }
+                        File.Delete("clienti.txt");
+                        File.Move("clienti_temp.txt", "clienti.txt");
+
                         if (!Directory.Exists("RICARICHE"))
                         {
 

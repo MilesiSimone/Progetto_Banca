@@ -13,12 +13,13 @@ namespace Progetto_Banca_Client
 {
     public partial class Form2 : Form
     {
-        Form1 f1 = new Form1();
-        
-        public Form2()
+        Form1 f;
+
+        public Form2(Form1 f1)
         {
             InitializeComponent();
             CheckForIllegalCrossThreadCalls = false;
+            f = f1;
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -143,6 +144,13 @@ namespace Progetto_Banca_Client
             var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             e.Cancel = (result == DialogResult.No);
+            if(result == DialogResult.Yes)
+            {
+               f.Show();
+                f.textBox_username.Text = "";
+                f.textBox_password.Text = "";
+                f.textBox_username.Focus();
+            }
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -150,6 +158,10 @@ namespace Progetto_Banca_Client
             Form4 f4 = new Form4(this);
             f4.Show();
         }
-        
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.cartabcc.it/vantaggi-e-servizi/controllo/Pagine/assistenza-24-7.aspx");
+        }
     }
 }

@@ -127,9 +127,10 @@ namespace Progetto_Banca_Client
                     nome = s[2] + " " + s[1];
                     if (s[0] == "ok")
                     {
-                        Form2 f2 = new Form2();
+                        Form2 f2 = new Form2(this);
                         f2.Show();
                         this.Hide();
+                        label_error.Visible = false;
                         f2.label_utente.Text = nome;
                         f2.label_iban.Text = s[3];
                         f2.label_saldo_contabile.Text = s[4] + " €";
@@ -146,7 +147,7 @@ namespace Progetto_Banca_Client
                         label_error.Visible = true;
                         textBox_username.Text = "";
                         textBox_password.Text = "";
-                        textBox_username.TabIndex = 1;
+                        textBox_username.Focus();
                     }
                     
                     // Release the socket.  
