@@ -616,5 +616,10 @@ namespace Progetto_Banca_Client
             {
             }
         }
+
+        private void textBox_iban_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

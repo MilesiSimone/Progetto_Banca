@@ -175,7 +175,7 @@ public class SynchronousSocketListener
                         {
                             string[] lines_bon = File.ReadAllLines(path);
                             string[] info_bon = new string[20];
-                            foreach (string line in lines_bon)
+                            foreach (string line in lines_bon.Reverse())
                             {
                                 info_bon = line.Split(';');
                                 msg_bonifici = msg_bonifici + info_bon[0] + ";" + info_bon[1] + ";" + info_bon[2] + ";" + info_bon[3] + ";" + info_bon[4] + ";" + info_bon[5] + ";" + info_bon[6] + ";" + info_bon[7] + ";" + info_bon[8] + "$";
@@ -211,7 +211,7 @@ public class SynchronousSocketListener
                         {
                             string[] lines_ric = File.ReadAllLines(path);
                             string[] info_ric = new string[5];
-                            foreach (string line in lines_ric)
+                            foreach (string line in lines_ric.Reverse())
                             {
                                 info_ric = line.Split(';');
                                 msg_ricariche = msg_ricariche + info_ric[0] + ";" + info_ric[1] + ";" + info_ric[2] + ";" + info_ric[3] + ";" + info_ric[4] + "$";

@@ -242,6 +242,7 @@
             this.textBox_iban.Size = new System.Drawing.Size(209, 22);
             this.textBox_iban.TabIndex = 4;
             this.textBox_iban.Visible = false;
+            this.textBox_iban.TextChanged += new System.EventHandler(this.textBox_iban_TextChanged);
             this.textBox_iban.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_iban_KeyPress);
             // 
             // label_dati

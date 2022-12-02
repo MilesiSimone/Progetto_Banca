@@ -98,6 +98,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1162, 95);
             this.panel1.TabIndex = 4;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // listView_BON
             // 
@@ -122,6 +123,7 @@
             this.listView_BON.Location = new System.Drawing.Point(186, 101);
             this.listView_BON.Name = "listView_BON";
             this.listView_BON.Size = new System.Drawing.Size(964, 337);
+            this.listView_BON.Sorting = System.Windows.Forms.SortOrder.Descending;
             this.listView_BON.TabIndex = 5;
             this.listView_BON.UseCompatibleStateImageBehavior = false;
             // 
