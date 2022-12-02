@@ -122,7 +122,7 @@ public class SynchronousSocketListener
                         //}
                         
 
-                        string path = "BONIFICI/" + messaggio_client[1] + ".txt";
+                        string path = "../BONIFICI/" + messaggio_client[1] + ".txt";
                         string lineappend = messaggio_client[9] + ';' + messaggio_client[10] + ';' + messaggio_client[2] + ';' + messaggio_client[3] + ';' + messaggio_client[4] + ';' + messaggio_client[5] + ';' + messaggio_client[6] + ';' + messaggio_client[7] + ';' + messaggio_client[8] + "\n";
                         File.AppendAllText(path, lineappend);
 
@@ -143,7 +143,7 @@ public class SynchronousSocketListener
                         messaggio_client[6] = messaggio_client[6].Substring(0, messaggio_client[6].Length - 5);
                         Console.WriteLine(messaggio_client[6]);
 
-                        path = "RICARICHE/" + messaggio_client[1] + ".txt";
+                        path = "../RICARICHE/" + messaggio_client[1] + ".txt";
                         lineappend = messaggio_client[5] + ';' + messaggio_client[6] + ';' + messaggio_client[3] + ';' + messaggio_client[2] + ';' + messaggio_client[4] + "\n";
                         File.AppendAllText(path, lineappend);
 
@@ -158,7 +158,7 @@ public class SynchronousSocketListener
 
                         string msg_nonesiste = "";
                         string msg_bonifici = "";
-                        path = "BONIFICI/" + messaggio_client[1] + ".txt";
+                        path = "../BONIFICI/" + messaggio_client[1] + ".txt";
                         if (File.Exists(path))
                         {
                             string[] lines_bon = File.ReadAllLines(path);
@@ -194,7 +194,7 @@ public class SynchronousSocketListener
 
                         msg_nonesiste = "";
                         string msg_ricariche = "";
-                        path = "RICARICHE/" + messaggio_client[1] + ".txt";
+                        path = "../RICARICHE/" + messaggio_client[1] + ".txt";
                         if (File.Exists(path))
                         {
                             string[] lines_ric = File.ReadAllLines(path);
