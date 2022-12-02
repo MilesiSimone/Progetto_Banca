@@ -105,24 +105,31 @@ public class SynchronousSocketListener
                         messaggio_client[10] = messaggio_client[10].Substring(0, messaggio_client[10].Length - 5);
                         Console.WriteLine(messaggio_client[10]);
 
-                        //string[] lines_read = File.ReadAllLines("clienti.txt");
-                        //info = new string[9];
-                        //foreach (string line in lines_read)
-                        //{
-                        //    info = line.Split(';');
-                        //    if (messaggio_client[1] == info[4])
-                        //    {
-                        //        File.WriteAllText("clienti.txt", info[0] + ';' + info[1] + ';' + info[2] + ';' + info[3] + ';' + info[4] + ';' + messaggio_client[4] + ';' + messaggio_client[4] + ';' + info[7] + ';' + info[8]);
-                        //        break;
-                        //    }
-                        //    else
-                        //    {
-                        //        File.WriteAllText("clienti.txt" , line);
-                        //    }
-                        //}
-                        
+                        string[] lines_read = File.ReadAllLines("clienti.txt");
+                        string path_temp = "clienti_temp.txt";
+                        string [] info_bon_read = new string[20];
+                        foreach (string line in lines_read)
+                        {
+                            info_bon_read = line.Split(';');
+                            if (messaggio_client[1] == info_bon_read[4])
+                            {
+                                File.AppendAllText(path_temp, info_bon_read[0] + ';' + info_bon_read[1] + ';' + info_bon_read[2] + ';' + info_bon_read[3] + ';' + info_bon_read[4] + ';' + messaggio_client[4] + ';' + messaggio_client[4] + ';' + info_bon_read[7] + ';' + info_bon_read[8] + "\n");
+                            }
+                            else
+                            {
+                                File.AppendAllText(path_temp, info_bon_read[0] + ';' + info_bon_read[1] + ';' + info_bon_read[2] + ';' + info_bon_read[3] + ';' + info_bon_read[4] + ';' + info_bon_read[5] + ';' + info_bon_read[6] + ';' + info_bon_read[7] + ';' + info_bon_read[8] + "\n");
+                            }
+                        }
+                        File.Delete("clienti.txt");
+                        File.Move("clienti_temp.txt", "clienti.txt");
 
-                        string path = "../BONIFICI/" + messaggio_client[1] + ".txt";
+
+                        if (!Directory.Exists("BONIFICI"))
+                        {
+
+                            Directory.CreateDirectory("BONIFICI");
+                        }
+                        string path = "BONIFICI/" + messaggio_client[1] + ".txt";
                         string lineappend = messaggio_client[9] + ';' + messaggio_client[10] + ';' + messaggio_client[2] + ';' + messaggio_client[3] + ';' + messaggio_client[4] + ';' + messaggio_client[5] + ';' + messaggio_client[6] + ';' + messaggio_client[7] + ';' + messaggio_client[8] + "\n";
                         File.AppendAllText(path, lineappend);
 
@@ -143,7 +150,12 @@ public class SynchronousSocketListener
                         messaggio_client[6] = messaggio_client[6].Substring(0, messaggio_client[6].Length - 5);
                         Console.WriteLine(messaggio_client[6]);
 
-                        path = "../RICARICHE/" + messaggio_client[1] + ".txt";
+                        if (!Directory.Exists("RICARICHE"))
+                        {
+
+                            Directory.CreateDirectory("RICARICHE");
+                        }
+                        path = "RICARICHE/" + messaggio_client[1] + ".txt";
                         lineappend = messaggio_client[5] + ';' + messaggio_client[6] + ';' + messaggio_client[3] + ';' + messaggio_client[2] + ';' + messaggio_client[4] + "\n";
                         File.AppendAllText(path, lineappend);
 
@@ -158,7 +170,7 @@ public class SynchronousSocketListener
 
                         string msg_nonesiste = "";
                         string msg_bonifici = "";
-                        path = "../BONIFICI/" + messaggio_client[1] + ".txt";
+                        path = "BONIFICI/" + messaggio_client[1] + ".txt";
                         if (File.Exists(path))
                         {
                             string[] lines_bon = File.ReadAllLines(path);
@@ -194,7 +206,7 @@ public class SynchronousSocketListener
 
                         msg_nonesiste = "";
                         string msg_ricariche = "";
-                        path = "../RICARICHE/" + messaggio_client[1] + ".txt";
+                        path = "RICARICHE/" + messaggio_client[1] + ".txt";
                         if (File.Exists(path))
                         {
                             string[] lines_ric = File.ReadAllLines(path);
